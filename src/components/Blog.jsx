@@ -23,7 +23,7 @@ const blogs = [
 
 export default function Blog() {
   return (
-    <section id="blog" className="py-24 bg-white">
+    <section id="Blog" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-16">

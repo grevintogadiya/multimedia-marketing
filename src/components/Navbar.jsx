@@ -30,12 +30,13 @@ export default function Navbar() {
               About
             </a>
 
+
             <a href="#services" className="hover:text-blue-600 duration-300">
               Services
             </a>
 
-            <a href="#services" className="hover:text-blue-600 duration-300">
-              Blog
+           <a href="#Blog" className="hover:text-blue-600 duration-300">
+            Blog
             </a>
 
 
