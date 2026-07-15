@@ -34,6 +34,11 @@ export default function Navbar() {
               Services
             </a>
 
+            <a href="#services" className="hover:text-blue-600 duration-300">
+              Blog
+            </a>
+
+
             <a href="#portfolio" className="hover:text-blue-600 duration-300">
               Portfolio
             </a>
