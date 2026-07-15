@@ -7,12 +7,10 @@ import Services from "./components/Services";
 import WhyChoose from "./components/WhyChoose";
 import Counter from "./components/Counter";
 import Portfolio from "./components/Portfolio";
-import Team from "./components/Team";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
-import Newsletter from "./components/Newsletter";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Map from "./components/Map";
@@ -34,12 +32,10 @@ function App() {
       <WhyChoose />
       <Counter />
       <Portfolio />
-      <Team />
       <Pricing />
       <Testimonials />
       <FAQ />
       <CTA />
-      <Newsletter />
       <Blog />
       <Contact />
       <Map />

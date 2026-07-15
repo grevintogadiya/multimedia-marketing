@@ -43,8 +43,6 @@ export default function Navbar() {
             Blog
             </a>
 
-
-          
             <a href="#contact" className="hover:text-blue-600 duration-300">
               Contact
             </a>

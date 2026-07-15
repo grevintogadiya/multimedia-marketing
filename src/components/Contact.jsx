@@ -61,12 +61,12 @@ const sendEmail = (e) => {
 
               <div className="flex items-center gap-4">
                 <FaPhoneAlt className="text-2xl" />
-                <span>+91 98765 43210</span>
+                <span>+91 9016441913</span>
               </div>
 
               <div className="flex items-center gap-4">
                 <FaEnvelope className="text-2xl" />
-                <span>info@multimediamarketing.com</span>
+                <span>gtmarketing5300@gmail.com</span>
               </div>
 
               <div className="flex items-center gap-4">
@@ -122,7 +122,7 @@ const sendEmail = (e) => {
                 name="message"
                 className="w-full border rounded-xl px-5 py-4 outline-none focus:border-blue-600"
               ></textarea>
-              
+
               <button
               type="submit"
               className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition"
