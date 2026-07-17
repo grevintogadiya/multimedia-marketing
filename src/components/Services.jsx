@@ -5,6 +5,8 @@ import {
   FaChartLine,
   FaPalette,
   FaMobileAlt,
+  FaEnvelope,
+  FaEdit,
 } from "react-icons/fa";
 
 const services = [
@@ -12,37 +14,49 @@ const services = [
     icon: <FaSearch className="text-5xl text-blue-600" />,
     title: "SEO Optimization",
     description:
-      "Improve your Google ranking and get more organic traffic.",
+      "Improve your Google ranking, increase organic traffic, and generate quality leads with advanced SEO strategies.",
   },
   {
     icon: <FaBullhorn className="text-5xl text-blue-600" />,
     title: "Google Ads",
     description:
-      "Run high-converting Google Ads campaigns with better ROI.",
+      "Run high-converting Google Ads campaigns that maximize ROI and drive targeted customers to your business.",
   },
   {
     icon: <FaMobileAlt className="text-5xl text-blue-600" />,
     title: "Social Media Marketing",
     description:
-      "Grow your brand on Instagram, Facebook and LinkedIn.",
+      "Build your brand and engage your audience on Instagram, Facebook, LinkedIn, and other social platforms.",
   },
   {
     icon: <FaLaptopCode className="text-5xl text-blue-600" />,
     title: "Website Development",
     description:
-      "Responsive and modern websites for your business.",
+      "Create responsive, modern, and SEO-friendly websites designed to convert visitors into customers.",
   },
   {
     icon: <FaChartLine className="text-5xl text-blue-600" />,
     title: "Performance Marketing",
     description:
-      "Generate leads and maximize sales with paid campaigns.",
+      "Generate more leads and sales with data-driven paid advertising and performance marketing campaigns.",
+  },
+  {
+    icon: <FaEnvelope className="text-5xl text-blue-600" />,
+    title: "Email Marketing",
+    description:
+      "Automate email campaigns, nurture leads, and increase customer retention with personalized email marketing.",
+  },
+  {
+    icon: <FaEdit className="text-5xl text-blue-600" />,
+    title: "Content Marketing",
+    description:
+      "Create high-quality blogs, website content, social media posts, and SEO articles that attract and convert customers.",
   },
   {
     icon: <FaPalette className="text-5xl text-blue-600" />,
     title: "Branding & Design",
     description:
-      "Professional logo, creatives and brand identity design.",
+      "Build a strong brand identity with professional logo design, brand guidelines, and eye-catching creatives.",
   },
 ];
 
@@ -65,8 +79,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -82,13 +95,13 @@ export default function Services() {
                 {service.description}
               </p>
 
-              <button className="mt-8 text-blue-600 font-semibold">
+              <button className="mt-8 text-blue-600 font-semibold hover:text-blue-800 transition">
                 Learn More →
               </button>
             </div>
           ))}
-
         </div>
+
       </div>
     </section>
   );

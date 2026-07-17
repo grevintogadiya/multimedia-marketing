@@ -21,13 +21,12 @@ export default function Hero() {
 
             <h1 className="text-5xl lg:text-7xl font-bold mt-8 leading-tight">
 
-              Grow Your Business
+            Digital Marketing Agency That 
+              { <span className="text-blue-600">
 
-              <span className="text-blue-600">
+                {" "}Helps Businesses Grow Online
 
-                {" "}With Digital Marketing
-
-              </span>
+              </span> }
 
             </h1>
 
