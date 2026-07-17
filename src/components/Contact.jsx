@@ -114,6 +114,9 @@ const sendEmail = (e) => {
                 <option>Social Media Marketing</option>
                 <option>Website Development</option>
                 <option>Performance Marketing</option>
+                <option>Email Marketing</option>
+                <option>Content Marketing</option>
+                <option>Branding & Design</option>
               </select>
 
               <textarea
