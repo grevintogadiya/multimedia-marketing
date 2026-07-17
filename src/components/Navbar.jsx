@@ -31,7 +31,7 @@ export default function Navbar() {
             <a href="#about" className="hover:text-blue-600 transition duration-300">About</a>
             <a href="#services" className="hover:text-blue-600 transition duration-300">Services</a>
             <a href="#portfolio" className="hover:text-blue-600 transition duration-300">Portfolio</a>
-            <a href="#blog" className="hover:text-blue-600 transition duration-300">Blog</a>
+            <a href="#Blog" className="hover:text-blue-600 transition duration-300">Blog</a>
             <a href="#contact" className="hover:text-blue-600 transition duration-300">Contact</a>
             <a
               href="#contact"
