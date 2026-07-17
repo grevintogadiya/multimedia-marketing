@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://multimedia-marketing.vercel.app/sitemap.xml
+Sitemap: https://multimedia-marketing.vercel.app/sitemap.xmlgit add .
