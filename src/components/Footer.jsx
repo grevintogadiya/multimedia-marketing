@@ -27,12 +27,12 @@ export default function Footer() {
 
             <div className="flex gap-4 mt-8">
 
-              <a
+              {/* <a
                 href="#"
                 className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:scale-110 transition"
               >
                 <FaFacebookF />
-              </a>
+              </a> */}
 
               <a
                 href="#"
@@ -70,6 +70,7 @@ export default function Footer() {
               <li><a href="#about" className="hover:text-white">About</a></li>
               <li><a href="#services" className="hover:text-white">Services</a></li>
               <li><a href="#portfolio" className="hover:text-white">Portfolio</a></li>
+                <li><a href="#Blog" className="hover:text-white">Blog</a></li>
               <li><a href="#contact" className="hover:text-white">Contact</a></li>
             </ul>
           </div>
@@ -87,6 +88,9 @@ export default function Footer() {
               <li>Social Media</li>
               <li>Web Development</li>
               <li>Performance Marketing</li>
+               <li>Email Marketing</li>
+              <li>Content Marketing</li>
+              <li>Branding & Design</li>
             </ul>
           </div>
 
