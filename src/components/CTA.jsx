@@ -4,11 +4,9 @@ export default function CTA() {
   return (
     <section className="py-24 bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 text-white">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* Left */}
-
+          {/* Left Content */}
           <div>
             <p className="uppercase tracking-widest font-semibold text-blue-200">
               Let's Grow Together
@@ -26,38 +24,41 @@ export default function CTA() {
             </p>
           </div>
 
-          {/* Right */}
-
+          {/* Right Buttons */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
 
-            <button className="bg-white text-blue-700 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:scale-105 transition">
-
+            {/* Get Free Consultation */}
+            <a
+              href="#contact"
+              className="bg-white text-blue-700 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:scale-105 transition duration-300"
+            >
               Get Free Consultation
-
               <FaArrowRight />
+            </a>
 
-            </button>
-
-            <button className="border-2 border-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-white hover:text-blue-700 transition">
-
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/919016441913?text=Hello%20Multimedia%20Marketing,%20I%20need%20Digital%20Marketing%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-white hover:text-blue-700 transition duration-300"
+            >
               <FaWhatsapp />
-
               WhatsApp
+            </a>
 
-            </button>
-
-            <button className="border-2 border-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-white hover:text-blue-700 transition">
-
+            {/* Call Now */}
+            <a
+              href="tel:+919016441913"
+              className="border-2 border-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-white hover:text-blue-700 transition duration-300"
+            >
               <FaPhoneAlt />
-
               Call Now
-
-            </button>
+            </a>
 
           </div>
 
         </div>
-
       </div>
     </section>
   );
