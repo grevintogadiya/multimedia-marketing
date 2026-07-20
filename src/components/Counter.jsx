@@ -15,7 +15,7 @@ export default function Counter() {
     {
       icon: <FaAward className="text-5xl text-blue-600" />,
       number: "5+",
-      title: "Awards Won",
+      title: "Certificates & Awards",
     },
     {
       icon: <FaSmile className="text-5xl text-blue-600" />,
