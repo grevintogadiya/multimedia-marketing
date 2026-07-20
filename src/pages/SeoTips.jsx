@@ -98,7 +98,7 @@ export default function TechnicalSeoTips() {
             </p>
 
             <h1 className="text-5xl font-bold mt-4 max-w-3xl">
-              20 Technical SEO Tips to Improve Website Rankings.
+              10 Technical SEO Tips to Improve Website Rankings.
             </h1>
 
             <p className="mt-6 text-xl text-gray-200 max-w-2xl">
