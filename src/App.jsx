@@ -1,3 +1,8 @@
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+
 import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -17,12 +22,17 @@ import Map from "./components/Map";
 import Footer from "./components/Footer";
 import WhatsApp from "./components/WhatsApp";
 import BackToTop from "./components/BackToTop";
+// import DarkMode from "./components/DarkMode";
 
-function App() {
+// Blog Pages
+import DigitalMarketingGuide from "./pages/DigitalMarketingGuide";
+// import SeoTips from "./pages/SeoTips";
+// import GoogleAdsVsFacebookAds from "./pages/GoogleAdsVsFacebookAds";
+
+function HomePage() {
   return (
     <>
-     <Loader />
-
+      <Loader />
 
       <Navbar />
       <Hero />
@@ -42,8 +52,32 @@ function App() {
       <Footer />
       <WhatsApp />
       <BackToTop />
+      {/* <DarkMode /> */}
     </>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Routes>
+
+      <Route path="/" element={<HomePage />} />
+
+      <Route
+      path="/blog/digital-marketing-guide-2026"
+      element={<DigitalMarketingGuide />}
+      />
+
+      {/* <Route
+        path="/blog/seo-tips"
+        element={<SeoTips />}
+      />
+
+      <Route
+        path="/blog/google-ads-vs-facebook-ads"
+        element={<GoogleAdsVsFacebookAds />}
+      /> */}
+
+    </Routes>
+  );
+}
