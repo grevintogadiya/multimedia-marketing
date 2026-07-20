@@ -100,35 +100,87 @@ export default function DigitalMarketingGuide() {
 
         {/* Table of Contents */}
 
-        <div className="bg-blue-50 rounded-xl sm:rounded-2xl p-5 sm:p-8">
+        <div className="bg-blue-50 rounded-2xl shadow-lg border border-blue-100 overflow-hidden">
 
-          <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-5">
-            Table of Contents
-          </h3>
+  {/* Header */}
+  <div className="bg-blue-600 px-6 py-6 text-center">
 
-          <ul className="space-y-2 sm:space-y-3 text-blue-700 font-medium text-sm sm:text-base">
+    <h2 className="text-3xl font-bold text-white">
+       Table of Contents
+    </h2>
 
-            <li>✔ Target Audience & Social Media Platforms</li>
+    <div className="w-20 h-1 bg-white mx-auto rounded-full my-4"></div>
 
-            <li>✔ Instagram Marketing</li>
+    <p className="text-blue-100 max-w-2xl mx-auto">
+      Explore the key Digital Marketing topics covered in this guide.
+    </p>
 
-            <li>✔ YouTube Marketing</li>
+  </div>
 
-            <li>✔ 30+ Customer Mindset</li>
+  {/* Content */}
 
-            <li>✔ Website Strategy</li>
+  <div className="p-6 sm:p-8">
 
-            <li>✔ Meta Ads</li>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-            <li>✔ Email Marketing</li>
+      <div className="flex items-center gap-3">
+        <span className="bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold">01</span>
+        <span> Target Audience & Social Media Platforms</span>
+      </div>
 
-            <li>✔ Conclusion</li>
+      <div className="flex items-center gap-3">
+        <span className="bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold">02</span>
+        <span>Instagram Marketing</span>
+      </div>
 
-            <li>✔ FAQ</li>
+      <div className="flex items-center gap-3">
+        <span className="bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold">03</span>
+        <span>Mobile-Friendly Website</span>
+      </div>
 
-          </ul>
+      <div className="flex items-center gap-3">
+        <span className="bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold">04</span>
+        <span>30+ Customer Mindset</span>
+      </div>
 
-        </div>
+      <div className="flex items-center gap-3">
+        <span className="bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold">05</span>
+        <span>Website Strategy</span>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <span className="bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold">06</span>
+        <span>Meta Ads</span>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <span className="bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold">07</span>
+        <span>Email Marketing</span>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <span className="bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold">08</span>
+        <span>Conclusion</span>
+      </div>
+
+      {/* <div className="flex items-center gap-3">
+        <span className="bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold">09</span>
+        <span>FAQ</span>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <span className="bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold">10</span>
+        <span>Technical SEO Audit</span>
+      </div> */}
+
+    </div>
+
+  </div>
+
+      </div>
+
+                
+       
 
       </section>
 
@@ -220,6 +272,12 @@ export default function DigitalMarketingGuide() {
           an essential strategy for brands targeting younger audiences.
         </p>
 
+        <img
+          src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200"
+          alt="Young Customers Shopping Online"
+          className="rounded-xl sm:rounded-2xl my-8 sm:my-10 shadow-lg w-full"
+        />
+
       </section>
 
       {/* YouTube */}
@@ -303,6 +361,12 @@ export default function DigitalMarketingGuide() {
           product information, customer testimonials and transparent
           communication.
         </p>
+
+        <img
+          src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200"
+          alt="Customer Researching Products Online"
+          className="rounded-xl sm:rounded-2xl my-8 sm:my-10 shadow-lg w-full"
+        />
 
       </section>
 
@@ -497,20 +561,13 @@ export default function DigitalMarketingGuide() {
 
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-5 mt-6 sm:mt-10">
 
-            {/* <a
-              href="/#Contact"
-              className="bg-white text-blue-700 px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold hover:bg-gray-100 duration-300"
-            >
-              Get Appointment
-            </a> */}
-
             <a
               href="https://wa.me/919016441913"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-green-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold hover:bg-green-600 duration-300"
+      target="_blank"
+      rel="noopener noreferrer"
+              className="bg-white text-blue-700 px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold hover:bg-gray-100 duration-300"
             >
-              WhatsApp Appointment
+              💬 Chat on WhatsApp
             </a>
 
           </div>

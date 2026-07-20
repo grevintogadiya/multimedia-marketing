@@ -26,8 +26,8 @@ import BackToTop from "./components/BackToTop";
 
 // Blog Pages
 import DigitalMarketingGuide from "./pages/DigitalMarketingGuide";
-// import SeoTips from "./pages/SeoTips";
-// import GoogleAdsVsFacebookAds from "./pages/GoogleAdsVsFacebookAds";
+import SeoTips from "./pages/SeoTips";
+import GoogleAdsVsFacebookAds from "./pages/GoogleAdsVsFacebookAds";
 
 function HomePage() {
   return (
@@ -68,7 +68,7 @@ export default function App() {
       element={<DigitalMarketingGuide />}
       />
 
-      {/* <Route
+      <Route
         path="/blog/seo-tips"
         element={<SeoTips />}
       />
@@ -76,7 +76,7 @@ export default function App() {
       <Route
         path="/blog/google-ads-vs-facebook-ads"
         element={<GoogleAdsVsFacebookAds />}
-      /> */}
+      /> 
 
     </Routes>
   );
