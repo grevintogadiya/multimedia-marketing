@@ -22,7 +22,7 @@ export default function About() {
             <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 lg:-bottom-6 lg:-right-6 bg-blue-600 text-white rounded-2xl p-4 sm:p-5 md:p-6 shadow-xl text-center min-w-[120px] sm:min-w-[140px]">
 
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-                5+
+                2+
               </h2>
 
               <p className="text-xs sm:text-sm md:text-base whitespace-nowrap">
@@ -120,7 +120,7 @@ export default function About() {
               <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300">
 
                 <h3 className="text-2xl sm:text-3xl font-bold text-blue-600">
-                  500+
+                  50+
                 </h3>
 
                 <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">
@@ -132,7 +132,7 @@ export default function About() {
               <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300">
 
                 <h3 className="text-2xl sm:text-3xl font-bold text-blue-600">
-                  250+
+                  100+
                 </h3>
 
                 <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">

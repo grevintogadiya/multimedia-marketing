@@ -51,12 +51,12 @@ export default function Hero() {
             <div className="grid grid-cols-3 gap-8 mt-14">
 
               <div>
-                <h2 className="text-4xl font-bold text-blue-600">500+</h2>
+                <h2 className="text-4xl font-bold text-blue-600">50+</h2>
                 <p className="text-gray-500 mt-2">Projects</p>
               </div>
 
               <div>
-                <h2 className="text-4xl font-bold text-blue-600">250+</h2>
+                <h2 className="text-4xl font-bold text-blue-600">100+</h2>
                 <p className="text-gray-500 mt-2">Clients</p>
               </div>
 
