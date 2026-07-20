@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
-const Blogs = [
+const blogs = [
   {
     title: "10 SEO Tips to Rank Higher on Google",
     date: "July 2026",
