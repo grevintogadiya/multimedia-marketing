@@ -4,17 +4,17 @@ export default function Counter() {
   const counters = [
     {
       icon: <FaBriefcase className="text-5xl text-blue-600" />,
-      number: "500+",
+      number: "50+",
       title: "Projects Completed",
     },
     {
       icon: <FaUsers className="text-5xl text-blue-600" />,
-      number: "250+",
+      number: "100+",
       title: "Happy Clients",
     },
     {
       icon: <FaAward className="text-5xl text-blue-600" />,
-      number: "15+",
+      number: "5+",
       title: "Awards Won",
     },
     {
