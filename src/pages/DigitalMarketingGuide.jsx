@@ -661,18 +661,7 @@ export default function DigitalMarketingGuide() {
 
       </section> */}
 
-      {/* Back Button */}
-
-      <div className="text-center mt-14 sm:mt-20 px-4 pb-14 sm:pb-20">
-
-        <Link
-          to="/"
-          className="inline-block bg-blue-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold hover:bg-blue-700 duration-300"
-        >
-          ← Back to Home
-        </Link>
-
-      </div>
+      
     </div>
       </>
   );

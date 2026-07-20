@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { FaWhatsapp } from "react-icons/fa";
 
+
 const tips = [
   {
     number: "1",
@@ -104,6 +105,7 @@ export default function TechnicalSeoTips() {
               Learn practical Technical SEO techniques that help Google crawl,
               index and rank your website.
             </p>
+
           </div>
         </section>
 
