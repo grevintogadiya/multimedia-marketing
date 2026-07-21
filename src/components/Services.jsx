@@ -95,9 +95,9 @@ export default function Services() {
                 {service.description}
               </p>
 
-              <button className="mt-8 text-blue-600 font-semibold hover:text-blue-800 transition">
+              {/* <button className="mt-8 text-blue-600 font-semibold hover:text-blue-800 transition">
                 Learn More →
-              </button>
+              </button> */}
             </div>
           ))}
         </div>

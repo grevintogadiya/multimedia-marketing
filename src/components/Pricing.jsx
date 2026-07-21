@@ -15,7 +15,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "₹24,999",
+    price: "₹15,999",
     description: "Best For Growing Businesses",
     features: [
       "Google Ads",
