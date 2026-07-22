@@ -163,7 +163,7 @@ export default function Navbar() {
               Pricing
             </button>  <button onClick={() => handleNavigation("#faq")}>
               FAQ
-            </button>  <button onClick={() => handleNavigation("#blog")}>
+            </button>  <button onClick={() => handleNavigation("#Blog")}>
               Blog
             </button>
 
