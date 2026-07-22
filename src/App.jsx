@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Companies from "./components/Companies";
 import About from "./components/About";
+import Certifications from "./components/Certifications";
 import Services from "./components/Services";
 import WhyChoose from "./components/WhyChoose";
 import Counter from "./components/Counter";
@@ -20,8 +21,9 @@ import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Map from "./components/Map";
 import Footer from "./components/Footer";
-import WhatsApp from "./components/WhatsApp";
-import BackToTop from "./components/BackToTop";
+// import WhatsApp from "./components/WhatsApp";
+// import BackToTop from "./components/BackToTop";
+import FloatingButtons from "./components/FloatingButtons";
 // import DarkMode from "./components/DarkMode";
 
 // Blog Pages
@@ -38,6 +40,7 @@ function HomePage() {
       <Hero />
       <Companies />
       <About />
+   <Certifications />
       <Services />
       <WhyChoose />
       <Counter />
@@ -50,8 +53,9 @@ function HomePage() {
       <Contact />
       <Map />
       <Footer />
-      <WhatsApp />
-      <BackToTop />
+      <FloatingButtons />
+      {/* <WhatsApp />
+      <BackToTop /> */}
       {/* <DarkMode /> */}
     </>
   );
