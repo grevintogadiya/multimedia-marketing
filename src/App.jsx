@@ -2,7 +2,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
+import ScrollToHash from "./components/ScrollToHash";
 import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -63,25 +63,27 @@ function HomePage() {
 
 export default function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToHash />
 
-      <Route path="/" element={<HomePage />} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
 
-      <Route
-      path="/blog/digital-marketing-guide-2026"
-      element={<DigitalMarketingGuide />}
-      />
+        <Route
+          path="/blog/digital-marketing-guide-2026"
+          element={<DigitalMarketingGuide />}
+        />
 
-      <Route
-        path="/blog/seo-tips"
-        element={<SeoTips />}
-      />
+        <Route
+          path="/blog/seo-tips"
+          element={<SeoTips />}
+        />
 
-      <Route
-        path="/blog/google-ads-vs-facebook-ads"
-        element={<GoogleAdsVsFacebookAds />}
-      /> 
-
-    </Routes>
+        <Route
+          path="/blog/google-ads-vs-facebook-ads"
+          element={<GoogleAdsVsFacebookAds />}
+        />
+      </Routes>
+    </>
   );
 }

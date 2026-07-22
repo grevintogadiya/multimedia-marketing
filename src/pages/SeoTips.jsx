@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import Navbar from "../components/Navbar";
 import { FaWhatsapp } from "react-icons/fa";
@@ -265,6 +266,92 @@ export default function TechnicalSeoTips() {
             </a>
           </div>
         </section>
+        {/* Related Blogs */}
+
+<section className="max-w-5xl mx-auto px-4 sm:px-6 mt-20 mb-20">
+
+  <div className="border-t pt-12">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
+      Related Blogs
+    </h2>
+
+    <p className="text-gray-600 text-center mb-10">
+      Continue learning with our latest Digital Marketing articles.
+    </p>
+
+    <div className="grid md:grid-cols-2 gap-8">
+
+      {/* Digital Marketing Guide */}
+
+      <Link
+        to="/blog/digital-marketing-guide-2026"
+        className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+          alt="Digital Marketing Guide"
+          className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
+        />
+
+        <div className="p-6">
+          <span className="text-sm text-blue-600 font-semibold">
+            Digital Marketing
+          </span>
+
+          <h3 className="text-2xl font-bold mt-2 group-hover:text-blue-600 transition">
+            Digital Marketing Guide 2026
+          </h3>
+
+          <p className="text-gray-600 mt-4">
+            Learn Digital Marketing, Social Media, AI Marketing,
+            Meta Ads, Email Marketing and Website Strategy.
+          </p>
+
+          <span className="inline-block mt-6 text-blue-600 font-semibold">
+            Read More →
+          </span>
+        </div>
+      </Link>
+
+
+      {/* Google Ads */}
+
+      <Link
+        to="/blog/google-ads-vs-facebook-ads"
+        className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=800"
+          alt="Google Ads vs Facebook Ads"
+          className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
+        />
+
+        <div className="p-6">
+          <span className="text-sm text-blue-600 font-semibold">
+            Google Ads
+          </span>
+
+          <h3 className="text-2xl font-bold mt-2 group-hover:text-blue-600 transition">
+            Google Ads vs Facebook Ads
+          </h3>
+
+          <p className="text-gray-600 mt-4">
+            Discover which advertising platform delivers
+            better results for your business.
+          </p>
+
+          <span className="inline-block mt-6 text-blue-600 font-semibold">
+            Read More →
+          </span>
+        </div>
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
       </div>
     </>
   );

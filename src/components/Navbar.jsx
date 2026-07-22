@@ -1,15 +1,36 @@
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaBullhorn } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 
+
 export default function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleNavigation = (section) => {
+    setMenuOpen(false);
+
+    if (location.pathname === "/") {
+      document.querySelector(section)?.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      navigate("/");
+
+      setTimeout(() => {
+        document.querySelector(section)?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 200);
+    }
+  };
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
         <div className="h-20 flex items-center justify-between">
-          
+
           {/* Logo */}
           <a href="/" className="flex items-center gap-3">
             <div className="bg-blue-600 p-3 rounded-xl shadow-lg">
@@ -27,8 +48,8 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-8 font-medium text-gray-700">
-            <a href="#home" className="hover:text-blue-600 transition duration-300">Home</a>
-            <a href="#about" className="hover:text-blue-600 transition duration-300">About</a>
+            {/* <a href="#home" className="hover:text-blue-600 transition duration-300">Home</a>
+          
             <a href="#services" className="hover:text-blue-600 transition duration-300">Services</a>
             <a href="#portfolio" className="hover:text-blue-600 transition duration-300">Portfolio</a>
              <a href="#pricing" className="hover:text-blue-600 transition duration-300">Pricing</a>
@@ -41,8 +62,71 @@ export default function Navbar() {
               className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-xl shadow-lg transition duration-300"
             >
               Get Started
-            </a>
+            </a> */}
+            <button
+              onClick={() => handleNavigation("#home")}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              Home
+            </button>
+
+            <button
+              onClick={() => handleNavigation("#about")}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              About
+            </button>
+
+            <button
+              onClick={() => handleNavigation("#services")}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              Services
+            </button>
+
+            <button
+              onClick={() => handleNavigation("#portfolio")}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              Portfolio
+            </button>
+
+            <button
+              onClick={() => handleNavigation("#pricing")}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              Pricing
+            </button>
+
+            <button
+              onClick={() => handleNavigation("#faq")}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              FAQ
+            </button>
+
+            <button
+              onClick={() => handleNavigation("#Blog")}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              Blog
+            </button>
+
+            <button
+              onClick={() => handleNavigation("#contact")}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              Contact
+            </button>
+
+            <button
+              onClick={() => handleNavigation("#contact")}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-xl shadow-lg transition duration-300"
+            >
+              Get Started
+            </button>
           </nav>
+
 
           {/* Mobile Menu Button */}
           <button
@@ -58,15 +142,31 @@ export default function Navbar() {
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-white flex flex-col pt-24 px-6 pb-10 lg:hidden">
           <nav className="flex flex-col gap-8 text-xl font-medium text-gray-800">
-            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+            {/* <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
             <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
             <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
             <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
             <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
             <a href="#Blog" onClick={() => setMenuOpen(false)}>Blog</a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-            
+            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a> */}
+
+            <button onClick={() => handleNavigation("#home")}>
+              Home
+            </button>  <button onClick={() => handleNavigation("#about")}>
+              About
+            </button>  <button onClick={() => handleNavigation("#services")}>
+              Services
+            </button>  <button onClick={() => handleNavigation("#portfolio")}>
+              Portfolio
+            </button>  <button onClick={() => handleNavigation("#pricing")}>
+              Pricing
+            </button>  <button onClick={() => handleNavigation("#faq")}>
+              FAQ
+            </button>  <button onClick={() => handleNavigation("#blog")}>
+              Blog
+            </button>
+
             {/* Get Started Button */}
             <a
               href="#contact"
