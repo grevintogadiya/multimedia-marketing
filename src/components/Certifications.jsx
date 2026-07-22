@@ -54,7 +54,6 @@ export default function Certifications() {
 
         <div
           className="text-center mb-16"
-          data-aos="fade-up"
         >
 
           <span className="text-blue-600 font-semibold uppercase tracking-widest">
@@ -86,7 +85,6 @@ export default function Certifications() {
 
             <div
               key={index}
-              data-aos="zoom-in"
               className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500"
             >
 

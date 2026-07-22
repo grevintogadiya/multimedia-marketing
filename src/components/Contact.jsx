@@ -1,30 +1,33 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 export default function Contact() {
+
   const form = useRef();
 
-const sendEmail = (e) => {
-  e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  emailjs
-    .sendForm(
+    emailjs.sendForm(
       "service_acwo52a",
       "template_s48atib",
       form.current,
-      "lc_gMhFI9P33CkEJn"
+      "4XyOmN3RGXZ8nwl8j"
     )
-    .then(
-      () => {
-        alert("✅ Message Sent Successfully!");
+      .then(() => {
+        alert("Message Sent Successfully!");
         form.current.reset();
-      },
-      () => {
-        alert("❌ Failed to Send Message");
-      }
-    );
-};
+      })
+      .catch((error) => {
+        console.log("EmailJS Error:", error);
+        alert(error.text || error.message);
+      });
+  };
+
   return (
     <section id="contact" className="py-24 bg-gray-100">
       <div className="max-w-7xl mx-auto px-6">
@@ -82,7 +85,7 @@ const sendEmail = (e) => {
 
           <div className="bg-white rounded-3xl shadow-lg p-10">
 
-          <form ref={form} onSubmit={sendEmail} className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
 
               <input
                 type="text"
@@ -95,15 +98,36 @@ const sendEmail = (e) => {
                 type="email"
                 name="user_email"
                 placeholder="Email Address"
+                required
+                onInput={(e) => {
+                  e.target.value = e.target.value
+                    .replace(/\s/g, "") // space remove
+                    .replace(/[^a-zA-Z0-9@._-]/g, ""); // only valid email characters
+                }}
                 className="w-full border rounded-xl px-5 py-4 outline-none focus:border-blue-600"
               />
 
-              <input
-                type="tel"
-                name="user_phone"
-                placeholder="Phone Number"
-                className="w-full border rounded-xl px-5 py-4 outline-none focus:border-blue-600"
-              />
+              <div className="flex">
+                {/* Country Code */}
+                <div className="flex items-center px-4 border border-r-0 rounded-l-xl bg-gray-100 text-gray-700 font-medium">
+                  🇮🇳 +91
+                </div>
+
+                {/* Phone Number */}
+                <input
+                  type="tel"
+                  name="user_phone"
+                  placeholder="Phone Number"
+                  maxLength={10}
+                  inputMode="numeric"
+                  pattern="[0-9]{10}"
+                  onInput={(e) => {
+                    e.target.value = e.target.value.replace(/\D/g, "").slice(0, 10);
+                  }}
+                  className="w-full border rounded-r-xl px-5 py-4 outline-none focus:border-blue-600"
+                  required
+                />
+              </div>
 
               <select
                 className="w-full border rounded-xl px-5 py-4 outline-none focus:border-blue-600" name="service"
@@ -127,10 +151,10 @@ const sendEmail = (e) => {
               ></textarea>
 
               <button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition"
+                type="submit"
+                className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition"
               >
-              Send Message
+                Send Message
               </button>
 
             </form>
