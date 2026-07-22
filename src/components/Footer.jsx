@@ -35,7 +35,9 @@ export default function Footer() {
               </a> */}
 
               <a
-                href="#"
+                href="https://www.instagram.com/__multimedia_marketing/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center hover:scale-110 transition"
               >
                 <FaInstagram />
@@ -49,7 +51,9 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://wa.me/919016441913"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center hover:scale-110 transition"
               >
                 <FaWhatsapp />
