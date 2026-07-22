@@ -31,6 +31,8 @@ export default function Navbar() {
             <a href="#about" className="hover:text-blue-600 transition duration-300">About</a>
             <a href="#services" className="hover:text-blue-600 transition duration-300">Services</a>
             <a href="#portfolio" className="hover:text-blue-600 transition duration-300">Portfolio</a>
+             <a href="#pricing" className="hover:text-blue-600 transition duration-300">Pricing</a>
+             <a href="#faq" className="hover:text-blue-600 transition duration-300">FAQ</a>
            <a href="#Blog" className="hover:text-blue-600 transition duration-300">Blog</a>
             <a href="#contact" className="hover:text-blue-600 transition duration-300">Contact</a>
   
@@ -60,6 +62,8 @@ export default function Navbar() {
             <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
             <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
+            <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
+            <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
             <a href="#Blog" onClick={() => setMenuOpen(false)}>Blog</a>
             <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
             
