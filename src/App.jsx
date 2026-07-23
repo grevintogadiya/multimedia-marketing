@@ -37,26 +37,27 @@ function HomePage() {
       <Loader />
 
       <Navbar />
-      <Hero />
-      <Companies />
-      <About />
-   <Certifications />
-      <Services />
-      <WhyChoose />
-      <Counter />
-      <Portfolio />
-      <Pricing />
-      <Testimonials />
-      <FAQ />
-      <CTA />
-      <Blog />
-      <Contact />
-      <Map />
+
+      <main>
+        <Hero />
+        <Companies />
+        <About />
+        <Certifications />
+        <Services />
+        <WhyChoose />
+        <Counter />
+        <Portfolio />
+        <Pricing />
+        <Testimonials />
+        <FAQ />
+        <CTA />
+        <Blog />
+        <Contact />
+        <Map />
+      </main>
+
       <Footer />
       <FloatingButtons />
-      {/* <WhatsApp />
-      <BackToTop /> */}
-      {/* <DarkMode /> */}
     </>
   );
 }
