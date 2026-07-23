@@ -1,4 +1,4 @@
-import { FaArrowRight, FaPlay } from "react-icons/fa";
+import { FaArrowRight, FaPlay} from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Hero() {
@@ -60,41 +60,29 @@ export default function Hero() {
             </div>
 
             {/* Counter */}
-            <div className="mt-10 grid w-full max-w-2xl grid-cols-3 gap-3 sm:gap-4 md:gap-5">
 
-              {/* Projects */}
-              <div className="rounded-2xl border border-gray-100 bg-white p-3 sm:p-4 md:p-5 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-600">
-                  50+
-                </h3>
+            <div className="py-14 px-4">
+              <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
 
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-medium text-gray-500">
-                  Projects
-                </p>
+                {/* Card 1 */}
+                <div className="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-lg transition">
+                  <h2 className="text-4xl font-bold text-blue-600">50+</h2>
+                  <p className="text-gray-500 mt-2">Projects</p>
+                </div>
+
+                {/* Card 2 */}
+                <div className="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-lg transition">
+                  <h2 className="text-4xl font-bold text-blue-600">100+</h2>
+                  <p className="text-gray-500 mt-2">Clients</p>
+                </div>
+
+                {/* Card 3 */}
+                <div className="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-lg transition">
+                  <h2 className="text-4xl font-bold text-blue-600">99%</h2>
+                  <p className="text-gray-500 mt-2">Satisfaction</p>
+                </div>
+
               </div>
-
-              {/* Clients */}
-              <div className="rounded-2xl border border-gray-100 bg-white p-3 sm:p-4 md:p-5 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-600">
-                  100+
-                </h3>
-
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-medium text-gray-500">
-                  Clients
-                </p>
-              </div>
-
-              {/* Satisfaction */}
-              <div className="rounded-2xl border border-gray-100 bg-white p-3 sm:p-4 md:p-5 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-600">
-                  99%
-                </h3>
-
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-medium text-gray-500">
-                  Satisfaction
-                </p>
-              </div>
-
             </div>
           </div>
 

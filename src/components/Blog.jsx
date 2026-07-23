@@ -32,9 +32,9 @@ export default function Blog() {
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <p className="text-blue-600 uppercase font-semibold tracking-wider">
+          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
             Latest Blog
-          </p>
+          </span>
 
           <h2 className="text-5xl font-bold mt-3">
             Digital Marketing Insights
@@ -72,9 +72,10 @@ export default function Blog() {
                 <h3 className="text-2xl font-bold mt-3 mb-4">
                   {blog.title}
                 </h3>
-
                 <Link
                   to={`/blog/${blog.slug}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition"
                 >
                   Read More

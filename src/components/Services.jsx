@@ -62,13 +62,15 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-gray-100">
-      <div className="max-w-7xl mx-auto px-6"> 
-        <div className="text-center mb-16"> 
-          <p className="text-blue-600 font-semibold uppercase"> Our Services </p> 
-          <h2 className="text-5xl font-bold mt-3"> Digital Marketing Solutions </h2> 
-          <p className="text-gray-500 mt-5 max-w-2xl mx-auto"> Everything your business needs to grow online under one roof. </p> 
-          </div>
+    <section className="py-24 from-gray-50 to-gray-100">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
+            Our Services
+          </span>
+          <h2 className="text-5xl font-bold mt-3"> Digital Marketing Solutions </h2>
+          <p className="text-gray-500 mt-5 max-w-2xl mx-auto"> Everything your business needs to grow online under one roof. </p>
+        </div>
 
         {/* CARDS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

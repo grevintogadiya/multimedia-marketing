@@ -30,45 +30,45 @@ export default function WhyChoose() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="bg-white pt-24 pb-8">
       <div className="max-w-7xl mx-auto px-6">
 
+        {/* Heading */}
         <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold uppercase">
+          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
             Why Choose Us
-          </p>
+          </span>
 
-          <h2 className="text-5xl font-bold mt-3">
+          <h2 className="mt-3 text-5xl font-bold text-gray-900">
             Why Businesses Trust Multimedia Marketing
           </h2>
 
-          <p className="text-gray-500 mt-5 max-w-3xl mx-auto">
+          <p className="mt-5 max-w-3xl mx-auto text-gray-500">
             We combine creativity, technology, and data-driven strategies
             to help your business grow faster.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
+        {/* Features */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-3xl p-8 text-center shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+              className="rounded-3xl bg-gray-50 p-8 text-center shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
-              <div className="flex justify-center mb-6">
+              <div className="mb-6 flex justify-center">
                 {item.icon}
               </div>
 
-              <h3 className="text-2xl font-bold">
+              <h3 className="text-2xl font-bold text-gray-900">
                 {item.title}
               </h3>
 
-              <p className="text-gray-500 mt-4">
+              <p className="mt-4 text-gray-500 leading-7">
                 {item.desc}
               </p>
             </div>
           ))}
-
         </div>
 
       </div>

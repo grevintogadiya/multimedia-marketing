@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { FaBullhorn } from "react-icons/fa";
+import { FaBullhorn} from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 
 

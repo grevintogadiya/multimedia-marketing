@@ -11,7 +11,7 @@ import About from "./components/About";
 import Certifications from "./components/Certifications";
 import Services from "./components/Services";
 import WhyChoose from "./components/WhyChoose";
-import Counter from "./components/Counter";
+// import Counter from "./components/Counter";
 import Portfolio from "./components/Portfolio";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
@@ -31,6 +31,7 @@ import DigitalMarketingGuide from "./pages/DigitalMarketingGuide";
 import SeoTips from "./pages/SeoTips";
 import GoogleAdsVsFacebookAds from "./pages/GoogleAdsVsFacebookAds";
 
+
 function HomePage() {
   return (
     <>
@@ -45,7 +46,7 @@ function HomePage() {
         <Certifications />
         <Services />
         <WhyChoose />
-        <Counter />
+        {/* <Counter /> */}
         <Portfolio />
         <Pricing />
         <Testimonials />
@@ -67,24 +68,21 @@ export default function App() {
     <>
       <ScrollToHash />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
+     <Routes>
+  <Route path="/" element={<HomePage />} />
 
-        <Route
-          path="/blog/digital-marketing-guide-2026"
-          element={<DigitalMarketingGuide />}
-        />
+  <Route path="/blog/seo-tips" element={<SeoTips />} />
 
-        <Route
-          path="/blog/seo-tips"
-          element={<SeoTips />}
-        />
+  <Route
+    path="/blog/google-ads-vs-facebook-ads"
+    element={<GoogleAdsVsFacebookAds />}
+  />
 
-        <Route
-          path="/blog/google-ads-vs-facebook-ads"
-          element={<GoogleAdsVsFacebookAds />}
-        />
-      </Routes>
+  <Route
+    path="/blog/digital-marketing-guide-2026"
+    element={<DigitalMarketingGuide />}
+  />
+</Routes>
     </>
   );
 }

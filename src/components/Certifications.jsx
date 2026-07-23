@@ -53,7 +53,7 @@ export default function Certifications() {
 
     <section
       id="certifications"
-      className="py-24 bg-gradient-to-b from-white to-blue-50"
+      className="py-24  from-white to-blue-50"
     >
 
       <div className="max-w-7xl mx-auto px-6">
@@ -65,10 +65,9 @@ export default function Certifications() {
           className="text-center mb-16"
         >
 
-          <span className="text-blue-600 font-semibold uppercase tracking-widest">
+         <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
             Certifications
           </span>
-
 
           <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900">
             Professional Certifications

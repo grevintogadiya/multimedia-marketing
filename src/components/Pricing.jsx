@@ -11,7 +11,6 @@ const plans = [
       "Basic SEO",
       "Monthly Report",
     ],
-    featured: false,
   },
   {
     name: "Professional",
@@ -25,7 +24,6 @@ const plans = [
       "Weekly Report",
       "Priority Support",
     ],
-    featured: true,
   },
   {
     name: "Enterprise",
@@ -39,75 +37,83 @@ const plans = [
       "Brand Strategy",
       "24/7 Support",
     ],
-    featured: false,
   },
 ];
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold uppercase">
-            Pricing Plans
-          </p>
+        {/* HEADER */}
+        <div className="text-center mb-14">
+          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
+         Pricing Plans
+          </span>
 
-          <h2 className="text-5xl font-bold mt-3">
+          <h2 className="text-5xl font-bold text-gray-900">
             Choose Your Plan
           </h2>
 
-          <p className="text-gray-500 mt-5">
-            Affordable packages for every business.
+          <p className="text-gray-500 mt-4">
+            Flexible pricing for every business.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* CARDS */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
 
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`rounded-3xl p-8 shadow-lg transition hover:-translate-y-2 ${
-                plan.featured
-                  ? "bg-blue-600 text-white"
-                  : "bg-white"
-              }`}
+              className="group relative rounded-3xl p-[1px]
+              bg-gradient-to-br from-blue-500/40 via-purple-500/30 to-transparent
+              hover:from-blue-500 hover:via-purple-500 hover:to-blue-500
+              transition duration-500"
             >
-              <h3 className="text-3xl font-bold">
-                {plan.name}
-              </h3>
 
-              <p className="mt-2 opacity-80">
-                {plan.description}
-              </p>
+              {/* INNER CARD */}
+              <div className="flex flex-col h-full rounded-3xl bg-white p-8 
+              border border-gray-200
+              group-hover:shadow-[0_10px_40px_rgba(0,0,0,0.12)]
+              hover:scale-[1.03]
+              transition duration-500">
 
-              <h2 className="text-5xl font-bold mt-8">
-                {plan.price}
-              </h2>
+                {/* TOP */}
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {plan.name}
+                  </h3>
 
-              <ul className="mt-8 space-y-4">
+                  <p className="text-gray-500 mt-2">
+                    {plan.description}
+                  </p>
 
-                {plan.features.map((feature, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-3"
-                  >
-                    <FaCheck />
-                    {feature}
-                  </li>
-                ))}
+                  <h2 className="text-4xl font-extrabold mt-6 text-gray-900">
+                    {plan.price}
+                  </h2>
+                </div>
 
-              </ul>
+                {/* FEATURES */}
+                <ul className="mt-6 space-y-4 flex-1">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-3 text-gray-600">
+                      <span className="bg-blue-50 p-1 rounded-full">
+                        <FaCheck className="text-blue-600 text-xs" />
+                      </span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
 
-              <button
-                className={`mt-10 w-full py-3 rounded-xl font-semibold ${
-                  plan.featured
-                    ? "bg-white text-blue-600"
-                    : "bg-blue-600 text-white"
-                }`}
-              >
-                Get Started
-              </button>
+                {/* BUTTON */}
+                <button className="mt-8 w-full py-3 rounded-xl font-semibold 
+                bg-gradient-to-r from-blue-600 to-purple-600 text-white 
+                hover:opacity-90 transition">
+                  Get Started
+                </button>
+
+              </div>
 
             </div>
           ))}

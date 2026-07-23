@@ -1,55 +1,59 @@
-import { FaBriefcase, FaUsers, FaAward, FaSmile } from "react-icons/fa";
+// import { FaBriefcase, FaUsers, FaAward, FaSmile } from "react-icons/fa";
 
-export default function Counter() {
-  const counters = [
-    {
-      icon: <FaBriefcase className="text-5xl text-blue-600" />,
-      number: "50+",
-      title: "Projects Completed",
-    },
-    {
-      icon: <FaUsers className="text-5xl text-blue-600" />,
-      number: "100+",
-      title: "Happy Clients",
-    },
-    {
-      icon: <FaAward className="text-5xl text-blue-600" />,
-      number: "5+",
-      title: "Certificates & Awards",
-    },
-    {
-      icon: <FaSmile className="text-5xl text-blue-600" />,
-      number: "98%",
-      title: "Client Satisfaction",
-    },
-  ];
+// export default function Counter() {
+//   const counters = [
+//     { icon: FaBriefcase, number: "50+", title: "Projects Completed" },
+//     { icon: FaUsers, number: "100+", title: "Happy Clients" },
+//     { icon: FaAward, number: "5+", title: "Awards Winning" },
+//     { icon: FaSmile, number: "98%", title: "Client Satisfaction" },
+//   ];
 
-  return (
-    <section className="py-20 bg-blue-600 text-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+//   return (
+//     <section className="relative py-28 bg-gradient-to-br from-blue-700 via-indigo-700 to-purple-700 text-white overflow-hidden">
+      
+//       {/* BACKGROUND GLOW */}
+//       <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-blue-400 opacity-30 blur-3xl rounded-full"></div>
+//       <div className="absolute bottom-[-100px] right-[-100px] w-[300px] h-[300px] bg-purple-400 opacity-30 blur-3xl rounded-full"></div>
 
-          {counters.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white/10 rounded-2xl p-8 hover:bg-white/20 transition duration-300"
-            >
-              <div className="flex justify-center mb-5">
-                {item.icon}
-              </div>
+//       <div className="relative max-w-7xl mx-auto px-6">
 
-              <h2 className="text-4xl font-bold">
-                {item.number}
-              </h2>
+//         {/* GRID */}
+//         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
 
-              <p className="mt-3 text-lg">
-                {item.title}
-              </p>
-            </div>
-          ))}
+//           {counters.map((item, index) => {
+//             const Icon = item.icon;
 
-        </div>
-      </div>
-    </section>
-  );
-}
+//             return (
+//               <div
+//                 key={index}
+//                 className="group relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 text-center shadow-xl hover:shadow-2xl hover:-translate-y-3 transition duration-500"
+//               >
+                
+//                 {/* INNER GLOW HOVER */}
+//                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-10 transition duration-500"></div>
+
+//                 {/* ICON */}
+//                 <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-md mb-5 group-hover:scale-110 transition duration-300">
+//                   <Icon className="text-white text-lg" />
+//                 </div>
+
+//                 {/* NUMBER */}
+//                 <h2 className="text-4xl font-extrabold tracking-tight">
+//                   {item.number}
+//                 </h2>
+
+//                 {/* TITLE */}
+//                 <p className="mt-3 text-sm text-white/80 tracking-wide">
+//                   {item.title}
+//                 </p>
+
+//               </div>
+//             );
+//           })}
+
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// }

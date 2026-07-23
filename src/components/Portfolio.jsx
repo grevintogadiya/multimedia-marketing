@@ -41,20 +41,20 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-white">
+    <section id="portfolio" className="pt-24 pb-8 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold uppercase">
+          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
             Portfolio
-          </p>
-
+          </span>
           <h2 className="text-5xl font-bold mt-3">
             Our Recent Projects
           </h2>
 
           <p className="text-gray-500 mt-5 max-w-2xl mx-auto">
-            Explore some of our successful digital marketing and web development projects.
+            Explore some of our successful digital marketing and web development
+            projects.
           </p>
         </div>
 
@@ -67,13 +67,11 @@ export default function Portfolio() {
             >
 
               <div className="overflow-hidden">
-
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
                 />
-
               </div>
 
               <div className="p-6">

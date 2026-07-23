@@ -30,3 +30,42 @@ img {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+.swiper {
+  overflow: visible !important;
+  padding-top: 15px;
+  padding-bottom: 10px !important;
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.swiper-slide > div {
+  width: 100%;
+}
+
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px !important;
+  background: #d1d5db;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  width: 32px;
+  border-radius: 9999px;
+  background: #2563eb;
+}
