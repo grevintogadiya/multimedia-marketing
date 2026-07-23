@@ -4,7 +4,7 @@ import {
   FaExternalLinkAlt,
   FaTimes,
 } from "react-icons/fa";
-
+import { useEffect } from "react";
 
 const academies = [
   {
@@ -36,8 +36,17 @@ const academies = [
 
 
 export default function Certifications() {
+  const [selectedAcademy, setSelectedAcademy] = useState(null); // ✅ TOP par
 
-  const [selectedAcademy, setSelectedAcademy] = useState(null);
+  useEffect(() => {
+    if (selectedAcademy) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    }
+  }, [selectedAcademy]);
 
 
   return (
@@ -81,7 +90,7 @@ export default function Certifications() {
         <div className="grid md:grid-cols-2 gap-10">
 
 
-          {academies.map((item,index)=>(
+          {academies.map((item, index) => (
 
             <div
               key={index}
@@ -102,7 +111,7 @@ export default function Certifications() {
 
                 <div className="flex justify-center items-center gap-2 text-blue-600 mb-3">
 
-                  <FaAward/>
+                  <FaAward />
 
                   <span className="font-semibold">
                     Verified Academy
@@ -126,15 +135,13 @@ export default function Certifications() {
 
                 <button
 
-                  onClick={()=>setSelectedAcademy(item)}
+                  onClick={() => setSelectedAcademy(item)}
 
                   className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 transition"
 
                 >
 
                   View Certificates
-
-                  <FaExternalLinkAlt/>
 
                 </button>
 
@@ -150,101 +157,97 @@ export default function Certifications() {
 
         </div>
 
-{/* Certificate Popup */}
+        {/* Certificate Popup */}
 
-{selectedAcademy && (
+        {selectedAcademy && (
 
-  <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-5">
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 overflow-hidden">
 
+            <div className="relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-xl scrollbar-hide">
 
-    <div className="bg-white rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
+              {/* Close Button */}
 
+              <button
+                onClick={() => setSelectedAcademy(null)}
+                className="absolute top-4 right-4 bg-red-500 text-white w-10 h-10 flex items-center justify-center rounded-full z-50"
+              >
+                ✕
+              </button>
 
-      {/* Close Button */}
+              {/* Popup Heading */}
 
-      <button
-        onClick={() => setSelectedAcademy(null)}
-        className="absolute top-5 right-5 bg-red-500 hover:bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition"
-      >
-        <FaTimes />
-      </button>
+              <div className="text-center mb-8">
 
-
-
-      {/* Popup Heading */}
-
-      <div className="text-center mb-8">
-
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-          {selectedAcademy.title}
-        </h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  {selectedAcademy.title}
+                </h2>
 
 
-        <p className="text-gray-500 mt-2">
-          All Verified Certificates
-        </p>
+                <p className="text-gray-500 mt-2">
+                  All Verified Certificates
+                </p>
 
-      </div>
+              </div>
 
 
 
-      {/* Certificates */}
+              {/* Certificates */}
 
-      <div className="grid sm:grid-cols-2 gap-8">
-
-
-        {selectedAcademy.certificates.map((certificate, index) => (
-
-          <div
-            key={index}
-            className="bg-gray-50 rounded-2xl p-4 shadow hover:shadow-xl transition"
-          >
+              <div className="grid sm:grid-cols-2 gap-8">
 
 
-            <a
-              href={certificate}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+                {selectedAcademy.certificates.map((certificate, index) => (
 
-              <img
-                src={certificate}
-                alt="Certificate"
-                className="w-full h-64 object-contain rounded-xl cursor-pointer hover:scale-105 transition duration-300"
-              />
-
-            </a>
+                  <div
+                    key={index}
+                    className="bg-gray-50 rounded-2xl p-4 shadow hover:shadow-xl transition"
+                  >
 
 
+                    <a
+                      href={certificate}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
 
-            <a
-              href={certificate}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition"
-            >
+                      <img
+                        src={certificate}
+                        alt="Certificate"
+                        className="w-full h-64 object-contain rounded-xl cursor-pointer hover:scale-105 transition duration-300"
+                      />
 
-              View Full Certificate
+                    </a>
 
-              <FaExternalLinkAlt />
 
-            </a>
+
+                    <a
+                      href={certificate}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition"
+                    >
+
+                      View Full Certificate
+
+                      <FaExternalLinkAlt />
+
+                    </a>
+
+
+                  </div>
+
+                ))}
+
+
+              </div>
+
+
+            </div>
 
 
           </div>
 
-        ))}
-
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
-)}
+        )}
 
       </div>
 

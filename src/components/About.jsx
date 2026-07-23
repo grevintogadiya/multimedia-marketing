@@ -1,4 +1,11 @@
-import { FaCheckCircle, FaBullseye, FaRocket } from "react-icons/fa";
+import {
+  FaCheckCircle,
+  FaRocket,
+  FaChartLine,
+  FaBullseye,
+  FaGlobe,
+  FaLightbulb,
+} from "react-icons/fa";
 
 export default function About() {
   return (
@@ -8,28 +15,29 @@ export default function About() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20">
 
           {/* LEFT IMAGE */}
-          <div className="relative w-full max-w-2xl mx-auto lg:max-w-none">
+          <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto">
 
             <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
-              alt="About Multimedia Marketing"
-              className="w-full h-64 sm:h-80 md:h-96 lg:h-[520px] object-cover rounded-3xl shadow-2xl"
+              src="/images/about.jpg"
+              alt="Digital Marketing Team"
+              className="
+      w-full
+      h-[280px]
+      sm:h-[360px]
+      md:h-[420px]
+      lg:h-[500px]
+      xl:h-[560px]
+      object-cover
+      rounded-3xl
+      shadow-2xl
+      transition-all
+      duration-500
+      hover:scale-[1.02]
+    "
             />
-
-            <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 lg:-bottom-6 lg:-right-6 bg-blue-600 text-white rounded-2xl p-4 sm:p-5 md:p-6 shadow-xl text-center min-w-[120px] sm:min-w-[140px]">
-
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-                2+
-              </h2>
-
-              <p className="text-xs sm:text-sm md:text-base whitespace-nowrap">
-                Years Experience
-              </p>
-
-            </div>
 
           </div>
 
@@ -115,58 +123,30 @@ export default function About() {
             </div>
 
             {/* STATS */}
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-10 sm:mt-12">
 
-              <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+            <div className="bg-gray-100 py-14 px-4">
+              <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
 
-                <h3 className="text-2xl sm:text-3xl font-bold text-blue-600">
-                  50+
-                </h3>
+                {/* Card 1 */}
+                <div className="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-lg transition">
+                  <h2 className="text-4xl font-bold text-blue-600">50+</h2>
+                  <p className="text-gray-500 mt-2">Projects</p>
+                </div>
 
-                <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">
-                  Projects
-                </p>
+                {/* Card 2 */}
+                <div className="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-lg transition">
+                  <h2 className="text-4xl font-bold text-blue-600">100+</h2>
+                  <p className="text-gray-500 mt-2">Clients</p>
+                </div>
 
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-
-                <h3 className="text-2xl sm:text-3xl font-bold text-blue-600">
-                  100+
-                </h3>
-
-                <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">
-                  Clients
-                </p>
+                {/* Card 3 */}
+                <div className="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-lg transition">
+                  <h2 className="text-4xl font-bold text-blue-600">99%</h2>
+                  <p className="text-gray-500 mt-2">Satisfaction</p>
+                </div>
 
               </div>
-
-              <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-
-                <h3 className="text-2xl sm:text-3xl font-bold text-blue-600">
-                  98%
-                </h3>
-
-                <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">
-                  Success Rate
-                </p>
-
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300">
-
-                <h3 className="text-2xl sm:text-3xl font-bold text-blue-600">
-                  24/7
-                </h3>
-
-                <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">
-                  Support
-                </p>
-
-              </div>
-
             </div>
-
           </div>
 
         </div>
