@@ -71,41 +71,40 @@ export default function FAQ() {
               <div
                 key={index}
                 className={`group rounded-3xl border bg-white overflow-hidden transition-all duration-300
-                ${
-                  isOpen
+                ${isOpen
                     ? "border-blue-500 shadow-xl shadow-blue-100"
                     : "border-slate-200 hover:border-blue-300 hover:shadow-lg hover:-translate-y-1"
-                }`}
+                  }`}
               >
 
-                <button
-                  onClick={() => setActive(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between px-7 py-6 text-left"
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setActive(isOpen ? null : index);
+                  }}
+                  className="flex w-full items-center justify-between px-7 py-6 text-left cursor-pointer"
                 >
-
                   <h3 className="text-lg font-semibold text-slate-900">
                     {faq.question}
                   </h3>
 
                   <div
                     className={`flex h-11 w-11 items-center justify-center rounded-full transition-all duration-300
-                    ${
-                      isOpen
+                  ${isOpen
                         ? "bg-blue-600 text-white rotate-45"
                         : "bg-blue-100 text-blue-600 group-hover:scale-110"
-                    }`}
+                      }`}
                   >
                     <FaPlus />
                   </div>
-
-                </button>
+                </a>
 
                 <div
-                  className={`grid transition-all duration-500 ease-in-out ${
-                    isOpen
-                      ? "grid-rows-[1fr]"
-                      : "grid-rows-[0fr]"
-                  }`}
+                  className={`grid transition-all duration-500 ease-in-out ${isOpen
+                    ? "grid-rows-[1fr]"
+                    : "grid-rows-[0fr]"
+                    }`}
                 >
 
                   <div className="overflow-hidden">

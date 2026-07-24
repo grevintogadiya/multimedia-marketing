@@ -260,13 +260,17 @@ export default function Contact() {
               ></textarea>
 
               {/* Submit Button */}
-              <button
-                type="submit"
-                className="flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  form.current.requestSubmit();
+                }}
+                className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 <FaPaperPlane />
                 Send Message
-              </button>
+              </a>
 
               <p className="text-center text-sm text-gray-500">
                 🔒 Your information is secure and will never be shared with third parties.

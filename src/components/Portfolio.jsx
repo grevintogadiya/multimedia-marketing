@@ -84,11 +84,15 @@ export default function Portfolio() {
                   {project.title}
                 </h3>
 
-                <button className="mt-6 flex items-center gap-2 text-blue-600 font-semibold">
+                <a
+                  href="https://your-project-link.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-700 transition"
+                >
                   View Project
-                  <FaExternalLinkAlt />
-                </button>
-
+                  <FaExternalLinkAlt className="text-sm" />
+                </a>
               </div>
 
             </div>

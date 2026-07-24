@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { FaBullhorn} from "react-icons/fa";
+import { FaBullhorn } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 
 
@@ -69,68 +69,103 @@ export default function Navbar() {
             >
               Get Started
             </a> */}
-            <button
-              onClick={() => handleNavigation("#home")}
-              className="relative text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+            <a
+              href="#home"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#home");
+              }}
+              className="relative cursor-pointer text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
             >
               Home
-            </button>
+            </a>
 
-            <button
-              onClick={() => handleNavigation("#about")}
-              className="relative text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+            <a
+              href="#about"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#about");
+              }}
+              className="relative cursor-pointer text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
             >
               About
-            </button>
+            </a>
 
-            <button
-              onClick={() => handleNavigation("#services")}
-              className="relative text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+            <a
+              href="#Services"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#Services")
+              }}
+              className="relative cursor-pointer text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
             >
               Services
-            </button>
-
-            <button
-              onClick={() => handleNavigation("#portfolio")}
-              className="relative text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+            </a>
+            <a
+              href="#portfolio"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#portfolio");
+              }}
+              className="relative cursor-pointer text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
             >
               Portfolio
-            </button>
+            </a>
 
-            <button
-              onClick={() => handleNavigation("#pricing")}
-              className="relative text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+            <a
+              href="#Pricing"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#Pricing");
+              }}
+              className="relative cursor-pointer text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
             >
               Pricing
-            </button>
+            </a>
 
-            <button
-              onClick={() => handleNavigation("#faq")}
-              className="relative text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+            <a
+              href="#faq"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#faq");
+              }}
+              className="relative cursor-pointer text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
             >
               FAQ
-            </button>
+            </a>
 
-            <button
-              onClick={() => handleNavigation("#Blog")}
-              className="relative text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+            <a
+              href="#Blog"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#Blog");
+              }}
+              className="relative cursor-pointer text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
             >
               Blog
-            </button>
+            </a>
 
-            <button
-              onClick={() => handleNavigation("#contact")}
-              className="relative text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#contact");
+              }}
+              className="relative cursor-pointer text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
             >
               Contact
-            </button>
+            </a>
 
-            <button
-              onClick={() => handleNavigation("#contact")}
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#contact");
+              }}
               className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg transition duration-300 text-sm"
             >
               Get Started
-            </button>
+            </a>
           </nav>
 
 
@@ -156,45 +191,99 @@ export default function Navbar() {
         menuOpen && (
           <div
             id="mobile-menu"
-            className="fixed inset-0 z-40 bg-white flex flex-col pt-24 px-6 pb-10 lg:hidden"
+            className="fixed inset-0 pt-16 bg-white z-40 flex items-center justify-center lg:hidden"
           >
             <nav
               aria-label="Mobile navigation"
-              className="flex flex-col gap-8 text-xl font-medium text-gray-800"
+              className="flex flex-col items-center justify-center h-full gap-8 text-xl font-medium text-gray-800"
             >
-              {/* <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-            <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
-            <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
-            <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
-            <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
-            <a href="#Blog" onClick={() => setMenuOpen(false)}>Blog</a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a> */}
-
-              <button onClick={() => handleNavigation("#home")}>
+              <a
+                href="#home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation("#home");
+                }}
+                className="hover:text-blue-600 transition duration-300"
+              >
                 Home
-              </button>  <button onClick={() => handleNavigation("#about")}>
-                About
-              </button>  <button onClick={() => handleNavigation("#services")}>
-                Services
-              </button>  <button onClick={() => handleNavigation("#portfolio")}>
-                Portfolio
-              </button>  <button onClick={() => handleNavigation("#pricing")}>
-                Pricing
-              </button>  <button onClick={() => handleNavigation("#faq")}>
-                FAQ
-              </button>  <button onClick={() => handleNavigation("#Blog")}>
-                Blog
-              </button>
+              </a>
 
-              {/* Get Started Button */}
-              <button
-                onClick={() => handleNavigation("#contact")}
-                className="bg-blue-500 text-white text-center py-2 px-4 rounded-lg font-medium text-sm mt-4"
+              <a
+                href="#About"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation("#about");
+                }}
+                className="hover:text-blue-600 transition duration-300"
+              >
+                About
+              </a>
+
+              <a
+                href="#Services"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation("#services");
+                }}
+                className="hover:text-blue-600 transition duration-300"
+              >
+                Services
+              </a>
+
+              <a
+                href="#portfolio"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation("#portfolio");
+                }}
+                className="hover:text-blue-600 transition duration-300"
+              >
+                Portfolio
+              </a>
+
+              <a
+                href="#pricing"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation("#pricing");
+                }}
+                className="hover:text-blue-600 transition duration-300"
+              >
+                Pricing
+              </a>
+
+              <a
+                href="#faq"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation("#faq");
+                }}
+                className="hover:text-blue-600 transition duration-300"
+              >
+                FAQ
+              </a>
+
+              <a
+                href="#Blog"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation("#Blog");
+                }}
+                className="hover:text-blue-600 transition duration-300"
+              >
+                Blog
+              </a>
+
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation("#contact");
+                }}
+                className="bg-blue-500 hover:bg-blue-600 text-white text-center py-3 px-6 rounded-lg font-medium mt-4"
               >
                 Get Started
-              </button>
-
+              </a>
             </nav>
           </div>
         )

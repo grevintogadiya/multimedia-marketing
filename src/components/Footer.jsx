@@ -4,6 +4,7 @@ import {
   FaLinkedinIn,
   FaWhatsapp,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -72,9 +73,11 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-400">
               <li><a href="#home" className="hover:text-white">Home</a></li>
               <li><a href="#about" className="hover:text-white">About</a></li>
-              <li><a href="#services" className="hover:text-white">Services</a></li>
+              <li><a href="#Services" className="hover:text-white">Services</a></li>
               <li><a href="#portfolio" className="hover:text-white">Portfolio</a></li>
-                <li><a href="#Blog" className="hover:text-white">Blog</a></li>
+              <li><a href="#Pricing" className="hover:text-white">Pricing</a></li>
+              <li><a href="#faq" className="hover:text-white">FAQ</a></li>
+              <li><a href="#Blog" className="hover:text-white">Blog</a></li>
               <li><a href="#contact" className="hover:text-white">Contact</a></li>
             </ul>
           </div>
@@ -86,15 +89,16 @@ export default function Footer() {
               Services
             </h3>
 
+
             <ul className="space-y-3 text-gray-400">
-              <li>SEO</li>
-              <li>Google Ads</li>
-              <li>Social Media</li>
-              <li>Web Development</li>
-              <li>Performance Marketing</li>
-               <li>Email Marketing</li>
-              <li>Content Marketing</li>
-              <li>Branding & Design</li>
+              <li><a href="#Services" className="hover:text-white">SEO</a></li>
+              <li><a href="#Services" className="hover:text-white">Google Ads</a></li>
+              <li><a href="#Services" className="hover:text-white">Social Media</a></li>
+              <li><a href="#Services" className="hover:text-white">Web Development</a></li>
+              <li><a href="#Services" className="hover:text-white">Performance Marketing</a></li>
+              <li><a href="#Services" className="hover:text-white">Email Marketing</a></li>
+              <li><a href="#Services" className="hover:text-white">Content Marketing</a></li>
+              <li><a href="#Services" className="hover:text-white">Branding & Design</a></li>
             </ul>
           </div>
 

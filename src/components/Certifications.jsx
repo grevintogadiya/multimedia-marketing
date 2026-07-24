@@ -65,7 +65,7 @@ export default function Certifications() {
           className="text-center mb-16"
         >
 
-         <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
+          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
             Certifications
           </span>
 
@@ -132,18 +132,16 @@ export default function Certifications() {
 
 
 
-                <button
-
-                  onClick={() => setSelectedAcademy(item)}
-
-                  className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 transition"
-
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedAcademy(item);
+                  }}
+                  className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-3 font-semibold text-white transition hover:bg-blue-700"
                 >
-
                   View Certificates
-
-                </button>
-
+                </a>
 
               </div>
 

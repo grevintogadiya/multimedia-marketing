@@ -42,13 +42,13 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section className="py-20 bg-white">
+    <section id="Pricing" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
         <div className="text-center mb-14">
           <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
-         Pricing Plans
+            Pricing Plans
           </span>
 
           <h2 className="text-5xl font-bold text-gray-900">
@@ -107,11 +107,15 @@ export default function Pricing() {
                 </ul>
 
                 {/* BUTTON */}
-                <button className="mt-8 w-full py-3 rounded-xl font-semibold 
-                bg-gradient-to-r from-blue-600 to-purple-600 text-white 
-                hover:opacity-90 transition">
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                  className="mt-8 block w-full rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 py-3 text-center font-semibold text-white transition hover:opacity-90"
+                >
                   Get Started
-                </button>
+                </a>
 
               </div>
 
