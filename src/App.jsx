@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Layout from "./layouts/Layout";
+import PageLayout from "./layouts/PageLayout";
 import Home from "./pages/Home";
 import SeoTips from "./pages/SeoTips";
 import GoogleAdsVsFacebookAds from "./pages/GoogleAdsVsFacebookAds";
@@ -8,7 +8,7 @@ import DigitalMarketingGuide from "./pages/DigitalMarketingGuide";
 function App() {
   return (
     <Routes>
-      <Route element={<Layout />}>
+      <Route element={<PageLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/blog/seo-tips" element={<SeoTips />} />
         <Route
