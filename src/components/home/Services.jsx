@@ -8,6 +8,8 @@ import {
   FaEnvelope,
   FaEdit,
 } from "react-icons/fa";
+import ServiceCard from "../card/ServiceCard";
+import SectionHeader from "../common/SectionHeader";
 
 const services = [
   {
@@ -62,43 +64,28 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="Services" className="py-24 from-gray-50 to-gray-100">
+    <section
+      id="Services"
+      className="bg-gradient-to-b from-white to-blue-50 py-24 from-gray-50 to-gray-100"
+    >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Our Services
-          </span>
-          <h2 className="text-5xl font-bold mt-3"> Digital Marketing Solutions </h2>
-          <p className="text-gray-500 mt-5 max-w-2xl mx-auto"> Everything your business needs to grow online under one roof. </p>
-        </div>
+        <SectionHeader
+          badge="Our Services"
+          title="Digital Marketing Solutions"
+          description="Everything your business needs to grow online under one roof."
+        />
 
         {/* CARDS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white/80 backdrop-blur-md border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2"
-            >
-
-              {/* SMALL ICON */}
-              <div className="w-10 h-10 flex items-center justify-center rounded-md bg-blue-100 text-blue-600 text-lg mb-4 group-hover:scale-110 transition">
-                {service.icon}
-              </div>
-
-              {/* TITLE */}
-              <h3 className="text-lg font-semibold group-hover:text-blue-600 transition">
-                {service.title}
-              </h3>
-
-              {/* FULL DESCRIPTION */}
-              <p className="text-gray-500 mt-3 text-sm leading-6">
-                {service.description}
-              </p>
-
-            </div>
+          {services.map((service) => (
+            <ServiceCard
+              key={service.title}
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+            />
           ))}
         </div>
-
       </div>
     </section>
   );

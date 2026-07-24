@@ -1,21 +1,13 @@
-import {
-  FaArrowRight,
-  FaWhatsapp,
-  FaPhoneAlt,
-} from "react-icons/fa";
+import { FaArrowRight, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 export default function CTA() {
   return (
     <section className="bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 py-16">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="rounded-3xl border border-white/20 bg-white/10 backdrop-blur-lg shadow-xl p-8 lg:p-10">
-
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-
             {/* Left Content */}
             <div className="max-w-2xl text-center lg:text-left">
-
               <span className="inline-flex rounded-full bg-white/20 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-blue-100">
                 Let's Grow Together
               </span>
@@ -30,12 +22,10 @@ export default function CTA() {
                 Grow your business with SEO, Google Ads, Social Media Marketing
                 and Website Development. Let's discuss your project today.
               </p>
-
             </div>
 
             {/* Right Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
-
               {/* Get Started */}
               <a
                 href="#contact"
@@ -64,13 +54,9 @@ export default function CTA() {
                 <FaPhoneAlt className="text-sm" />
                 Call Now
               </a>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

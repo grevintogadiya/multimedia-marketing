@@ -1,8 +1,15 @@
-import { FaArrowRight, FaPlay, FaBriefcase, FaUsers, FaAward, FaSmile } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaPlay,
+  FaBriefcase,
+  FaUsers,
+  FaAward,
+  FaSmile,
+} from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
+import Button from "../common/Button";
 
 export default function Hero() {
-
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -27,7 +34,6 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* LEFT */}
           <div className="text-center lg:text-left">
-
             <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/80 px-5 py-2 shadow-lg backdrop-blur-md">
               <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
 
@@ -50,17 +56,7 @@ export default function Hero() {
 
             {/* Buttons */}
             <div className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-              <a
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  goToContact();
-                }}
-                className="group inline-flex items-center w-full sm:w-auto justify-center gap-3 rounded-xl bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-500/30"
-              >
-                Get Started
-                <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
+              <Button>Get Started</Button>
               <a
                 href="https://www.youtube.com/@YOUR_CHANNEL_NAME"
                 target="_blank"
@@ -101,7 +97,6 @@ export default function Hero() {
 
           {/* RIGHT */}
           <div className="relative rounded-3xl border border-gray-200 shadow-xl">
-
             {/* Background Glow */}
             <div className="absolute -top-6 -left-6 h-32 w-32 md:h-48 md:w-48 rounded-full bg-blue-500/20 blur-3xl -z-10"></div>
 
@@ -109,7 +104,6 @@ export default function Hero() {
 
             {/* Image */}
             <div className="block w-full h-auto rounded-3xl">
-
               <img
                 src="/images/hero.webp"
                 srcSet="
@@ -125,9 +119,7 @@ export default function Hero() {
                 decoding="async"
                 className="block w-full h-auto object-cover rounded-3xl"
               />
-
             </div>
-
           </div>
         </div>
       </div>

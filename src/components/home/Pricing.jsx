@@ -1,4 +1,5 @@
 import { FaCheck } from "react-icons/fa";
+import SectionHeader from "../common/SectionHeader";
 
 const plans = [
   {
@@ -42,27 +43,20 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="Pricing" className="py-20 bg-white">
+    <section
+      id="Pricing"
+      className=" bg-gradient-to-b from-white to-slate-50 py-20 bg-white"
+    >
       <div className="max-w-7xl mx-auto px-6">
-
         {/* HEADER */}
-        <div className="text-center mb-14">
-          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Pricing Plans
-          </span>
-
-          <h2 className="text-5xl font-bold text-gray-900">
-            Choose Your Plan
-          </h2>
-
-          <p className="text-gray-500 mt-4">
-            Flexible pricing for every business.
-          </p>
-        </div>
+        <SectionHeader
+          badge="Pricing Plans"
+          title="Choose Your Plan"
+          description="Flexible pricing for every business."
+        />
 
         {/* CARDS */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
-
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -71,23 +65,21 @@ export default function Pricing() {
               hover:from-blue-500 hover:via-purple-500 hover:to-blue-500
               transition duration-500"
             >
-
               {/* INNER CARD */}
-              <div className="flex flex-col h-full rounded-3xl bg-white p-8 
+              <div
+                className="flex flex-col h-full rounded-3xl bg-white p-8 
               border border-gray-200
               group-hover:shadow-[0_10px_40px_rgba(0,0,0,0.12)]
               hover:scale-[1.03]
-              transition duration-500">
-
+              transition duration-500"
+              >
                 {/* TOP */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">
                     {plan.name}
                   </h3>
 
-                  <p className="text-gray-500 mt-2">
-                    {plan.description}
-                  </p>
+                  <p className="text-gray-500 mt-2">{plan.description}</p>
 
                   <h2 className="text-4xl font-extrabold mt-6 text-gray-900">
                     {plan.price}
@@ -97,7 +89,10 @@ export default function Pricing() {
                 {/* FEATURES */}
                 <ul className="mt-6 space-y-4 flex-1">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3 text-gray-600">
+                    <li
+                      key={i}
+                      className="flex items-center gap-3 text-gray-600"
+                    >
                       <span className="bg-blue-50 p-1 rounded-full">
                         <FaCheck className="text-blue-600 text-xs" />
                       </span>
@@ -116,14 +111,10 @@ export default function Pricing() {
                 >
                   Get Started
                 </a>
-
               </div>
-
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

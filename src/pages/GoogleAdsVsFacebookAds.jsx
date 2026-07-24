@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/layout/Navbar";
 import {
   FaCalendarAlt,
   FaClock,
@@ -40,8 +40,8 @@ export const GoogleAdsVsFacebookAds = () => {
             </h1>
 
             <p className="mt-6 text-xl text-gray-200 max-w-3xl leading-8">
-              Learn the difference between Google Ads and Facebook Ads,
-              their advantages, costs, targeting methods and which advertising
+              Learn the difference between Google Ads and Facebook Ads, their
+              advantages, costs, targeting methods and which advertising
               platform is best for your business growth.
             </p>
 
@@ -52,8 +52,7 @@ export const GoogleAdsVsFacebookAds = () => {
               </span>
 
               <span className="flex items-center gap-2">
-                <FaClock />
-                8 min read
+                <FaClock />8 min read
               </span>
             </div>
 
@@ -62,15 +61,13 @@ export const GoogleAdsVsFacebookAds = () => {
               <div className="flex items-center gap-3 bg-white/10 border border-white/20 backdrop-blur-sm rounded-lg px-5 py-3">
                 <FaGoogle className="text-lg text-white" />
                 <span className="text-sm">
-                  Avg. CPC{" "}
-                  <strong className="font-mono">$2 – $4</strong>
+                  Avg. CPC <strong className="font-mono">$2 – $4</strong>
                 </span>
               </div>
               <div className="flex items-center gap-3 bg-white/10 border border-white/20 backdrop-blur-sm rounded-lg px-5 py-3">
                 <FaFacebook className="text-lg text-white" />
                 <span className="text-sm">
-                  Avg. CPC{" "}
-                  <strong className="font-mono">$1 – $2</strong>
+                  Avg. CPC <strong className="font-mono">$1 – $2</strong>
                 </span>
               </div>
             </div>
@@ -90,9 +87,9 @@ export const GoogleAdsVsFacebookAds = () => {
             <p className="text-lg leading-8 text-gray-700 mb-8">
               Two of the most powerful advertising platforms are
               <strong> Google Ads</strong> and
-              <strong> Facebook Ads</strong>. Both platforms provide
-              excellent marketing opportunities but their working methods are
-              completely different.
+              <strong> Facebook Ads</strong>. Both platforms provide excellent
+              marketing opportunities but their working methods are completely
+              different.
             </p>
 
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-xl p-6">
@@ -100,8 +97,8 @@ export const GoogleAdsVsFacebookAds = () => {
 
               <p className="text-gray-700 leading-7">
                 Google Ads is best for capturing customers who are already
-                searching for your products or services. Facebook Ads is
-                best for creating brand awareness and reaching new audiences.
+                searching for your products or services. Facebook Ads is best
+                for creating brand awareness and reaching new audiences.
               </p>
             </div>
           </div>
@@ -161,17 +158,16 @@ export const GoogleAdsVsFacebookAds = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
               <div>
                 <p className="text-gray-700 text-lg leading-8 mb-6">
-                  Google Ads is an online advertising platform created by
-                  Google that allows businesses to display advertisements on
-                  Google Search, YouTube, Google Display Network and other
-                  partner websites.
+                  Google Ads is an online advertising platform created by Google
+                  that allows businesses to display advertisements on Google
+                  Search, YouTube, Google Display Network and other partner
+                  websites.
                 </p>
 
                 <p className="text-gray-700 text-lg leading-8">
-                  Google Ads works on a
-                  <strong> search intent model</strong>. This means ads
-                  appear when users actively search for products, services
-                  or solutions.
+                  Google Ads works on a<strong> search intent model</strong>.
+                  This means ads appear when users actively search for products,
+                  services or solutions.
                 </p>
               </div>
 
@@ -188,8 +184,8 @@ export const GoogleAdsVsFacebookAds = () => {
               <p className="text-gray-700">
                 A user searches:
                 <strong> "Best Digital Marketing Agency Near Me"</strong>
-                Businesses running Google Search Ads can appear at the top
-                of search results.
+                Businesses running Google Search Ads can appear at the top of
+                search results.
               </p>
             </div>
           </div>
@@ -216,14 +212,14 @@ export const GoogleAdsVsFacebookAds = () => {
               <div className="md:order-2 order-1">
                 <p className="text-gray-700 text-lg leading-8 mb-6">
                   Facebook Ads is Meta's advertising platform that allows
-                  businesses to advertise on Facebook, Instagram, Messenger
-                  and Audience Network.
+                  businesses to advertise on Facebook, Instagram, Messenger and
+                  Audience Network.
                 </p>
 
                 <p className="text-gray-700 text-lg leading-8">
-                  Unlike Google Ads, Facebook Ads does not depend on search.
-                  It targets users based on interests, demographics,
-                  location, behaviour and online activity.
+                  Unlike Google Ads, Facebook Ads does not depend on search. It
+                  targets users based on interests, demographics, location,
+                  behaviour and online activity.
                 </p>
               </div>
             </div>
@@ -430,12 +426,12 @@ export const GoogleAdsVsFacebookAds = () => {
 
             <p className="text-lg text-gray-700 leading-8">
               There is no single winner between Google Ads and Facebook Ads.
-              Both platforms have different advantages. Google Ads is
-              powerful for capturing existing customers who are searching
-              for solutions, while Facebook Ads helps businesses create
-              awareness and reach new audiences. The best digital marketing
-              strategy is using both platforms together with proper
-              targeting, testing and optimization.
+              Both platforms have different advantages. Google Ads is powerful
+              for capturing existing customers who are searching for solutions,
+              while Facebook Ads helps businesses create awareness and reach new
+              audiences. The best digital marketing strategy is using both
+              platforms together with proper targeting, testing and
+              optimization.
             </p>
           </div>
         </section>
@@ -456,8 +452,8 @@ export const GoogleAdsVsFacebookAds = () => {
             </h2>
 
             <p className="text-xl text-blue-100 mb-8">
-              Multimedia Marketing helps businesses grow with SEO, Google
-              Ads, Facebook Ads and performance marketing strategies.
+              Multimedia Marketing helps businesses grow with SEO, Google Ads,
+              Facebook Ads and performance marketing strategies.
             </p>
 
             <a
@@ -472,89 +468,83 @@ export const GoogleAdsVsFacebookAds = () => {
         </section>
         {/* Related Blogs */}
 
-<section className="max-w-5xl mx-auto px-4 sm:px-6 mt-20 mb-20">
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 mt-20 mb-20">
+          <div className="border-t pt-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
+              Related Blogs
+            </h2>
 
-  <div className="border-t pt-12">
+            <p className="text-gray-600 text-center mb-10">
+              Continue learning with our latest Digital Marketing articles.
+            </p>
 
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
-      Related Blogs
-    </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Digital Marketing Guide */}
 
-    <p className="text-gray-600 text-center mb-10">
-      Continue learning with our latest Digital Marketing articles.
-    </p>
+              <Link
+                to="/blog/digital-marketing-guide-2026"
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+                  alt="Digital Marketing Guide"
+                  className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
+                />
 
-    <div className="grid md:grid-cols-2 gap-8">
+                <div className="p-6">
+                  <span className="text-sm text-blue-600 font-semibold">
+                    Digital Marketing
+                  </span>
 
-      {/* Digital Marketing Guide */}
+                  <h3 className="text-2xl font-bold mt-2 group-hover:text-blue-600 transition">
+                    Digital Marketing Guide 2026
+                  </h3>
 
-      <Link
-        to="/blog/digital-marketing-guide-2026"
-        className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
-          alt="Digital Marketing Guide"
-          className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
-        />
+                  <p className="text-gray-600 mt-4">
+                    Learn Digital Marketing, AI Marketing, Social Media, Meta
+                    Ads, Email Marketing and Website Strategy.
+                  </p>
 
-        <div className="p-6">
-          <span className="text-sm text-blue-600 font-semibold">
-            Digital Marketing
-          </span>
+                  <span className="inline-block mt-6 text-blue-600 font-semibold">
+                    Read More →
+                  </span>
+                </div>
+              </Link>
 
-          <h3 className="text-2xl font-bold mt-2 group-hover:text-blue-600 transition">
-            Digital Marketing Guide 2026
-          </h3>
+              {/* SEO Tips */}
 
-          <p className="text-gray-600 mt-4">
-            Learn Digital Marketing, AI Marketing, Social Media,
-            Meta Ads, Email Marketing and Website Strategy.
-          </p>
+              <Link
+                to="/blog/seo-tips"
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800"
+                  alt="SEO Tips"
+                  className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
+                />
 
-          <span className="inline-block mt-6 text-blue-600 font-semibold">
-            Read More →
-          </span>
-        </div>
-      </Link>
+                <div className="p-6">
+                  <span className="text-sm text-blue-600 font-semibold">
+                    SEO
+                  </span>
 
-      {/* SEO Tips */}
+                  <h3 className="text-2xl font-bold mt-2 group-hover:text-blue-600 transition">
+                    SEO Tips to Improve Google Rankings
+                  </h3>
 
-      <Link
-        to="/blog/seo-tips"
-        className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800"
-          alt="SEO Tips"
-          className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
-        />
+                  <p className="text-gray-600 mt-4">
+                    Learn Keyword Research, On-Page SEO, Technical SEO, Internal
+                    Linking and Local SEO.
+                  </p>
 
-        <div className="p-6">
-          <span className="text-sm text-blue-600 font-semibold">
-            SEO
-          </span>
-
-          <h3 className="text-2xl font-bold mt-2 group-hover:text-blue-600 transition">
-            SEO Tips to Improve Google Rankings
-          </h3>
-
-          <p className="text-gray-600 mt-4">
-            Learn Keyword Research, On-Page SEO, Technical SEO,
-            Internal Linking and Local SEO.
-          </p>
-
-          <span className="inline-block mt-6 text-blue-600 font-semibold">
-            Read More →
-          </span>
-        </div>
-      </Link>
-
-    </div>
-
-  </div>
-
-</section>
+                  <span className="inline-block mt-6 text-blue-600 font-semibold">
+                    Read More →
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

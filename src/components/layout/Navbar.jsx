@@ -3,7 +3,6 @@ import { useState } from "react";
 import { FaBullhorn } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 
-
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -24,7 +23,6 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full bg-white/95 shadow-md z-50 transition-all duration-500">
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
         <div className="h-16 flex items-center justify-between">
-
           {/* Logo */}
           {/* Logo */}
           <Link
@@ -32,10 +30,7 @@ export default function Navbar() {
             className="flex items-center gap-3 transition-transform duration-300 hover:scale-105"
           >
             <div className="bg-blue-600 p-2.5 rounded-xl shadow-lg transition-all duration-300 hover:scale-110 hover:rotate-6">
-              <FaBullhorn
-                className="text-2xl text-white"
-                aria-hidden="true"
-              />
+              <FaBullhorn className="text-2xl text-white" aria-hidden="true" />
             </div>
 
             <div>
@@ -43,9 +38,7 @@ export default function Navbar() {
                 Multimedia
               </h1>
 
-              <p className="text-lg font-semibold text-blue-700">
-                Marketing
-              </p>
+              <p className="text-lg font-semibold text-blue-700">Marketing</p>
             </div>
           </Link>
 
@@ -95,7 +88,7 @@ export default function Navbar() {
               href="#Services"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavigation("#Services")
+                handleNavigation("#Services");
               }}
               className="relative cursor-pointer text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
             >
@@ -168,11 +161,12 @@ export default function Navbar() {
             </a>
           </nav>
 
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={
+              menuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             className="lg:hidden text-3xl text-blue-700 z-50 relative"
@@ -184,110 +178,108 @@ export default function Navbar() {
             )}
           </button>
         </div>
-      </div >
+      </div>
 
       {/* Mobile Menu Overlay */}
-      {
-        menuOpen && (
-          <div
-            id="mobile-menu"
-            className="fixed inset-0 pt-16 bg-white z-40 flex items-center justify-center lg:hidden"
+      {menuOpen && (
+        <div
+          id="mobile-menu"
+          className="fixed inset-0 pt-16 bg-white z-40 flex items-center justify-center lg:hidden"
+        >
+          <nav
+            aria-label="Mobile navigation"
+            className="flex flex-col items-center justify-center h-full gap-8 text-xl font-medium text-gray-800"
           >
-            <nav
-              aria-label="Mobile navigation"
-              className="flex flex-col items-center justify-center h-full gap-8 text-xl font-medium text-gray-800"
+            <a
+              href="#home"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#home");
+              }}
+              className="hover:text-blue-600 transition duration-300"
             >
-              <a
-                href="#home"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigation("#home");
-                }}
-                className="hover:text-blue-600 transition duration-300"
-              >
-                Home
-              </a>
+              Home
+            </a>
 
-              <a
-                href="#About"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigation("#about");
-                }}
-                className="hover:text-blue-600 transition duration-300"
-              >
-                About
-              </a>
+            <a
+              href="#About"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#about");
+              }}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              About
+            </a>
 
-              <a
-                href="#Services"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigation("#services");
-                }}
-                className="hover:text-blue-600 transition duration-300"
-              >
-                Services
-              </a>
+            <a
+              href="#Services"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#services");
+              }}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              Services
+            </a>
 
-              <a
-                href="#portfolio"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigation("#portfolio");
-                }}
-                className="hover:text-blue-600 transition duration-300"
-              >
-                Portfolio
-              </a>
+            <a
+              href="#portfolio"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#portfolio");
+              }}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              Portfolio
+            </a>
 
-              <a
-                href="#pricing"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigation("#pricing");
-                }}
-                className="hover:text-blue-600 transition duration-300"
-              >
-                Pricing
-              </a>
+            <a
+              href="#pricing"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#pricing");
+              }}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              Pricing
+            </a>
 
-              <a
-                href="#faq"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigation("#faq");
-                }}
-                className="hover:text-blue-600 transition duration-300"
-              >
-                FAQ
-              </a>
+            <a
+              href="#faq"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#faq");
+              }}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              FAQ
+            </a>
 
-              <a
-                href="#Blog"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigation("#Blog");
-                }}
-                className="hover:text-blue-600 transition duration-300"
-              >
-                Blog
-              </a>
+            <a
+              href="#Blog"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#Blog");
+              }}
+              className="hover:text-blue-600 transition duration-300"
+            >
+              Blog
+            </a>
 
-              <a
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigation("#contact");
-                }}
-                className="bg-blue-500 hover:bg-blue-600 text-white text-center py-3 px-6 rounded-lg font-medium mt-4"
-              >
-                Get Started
-              </a>
-            </nav>
-          </div>
-        )
-      }
-    </header >
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("#contact");
+              }}
+              className="bg-blue-500 hover:bg-blue-600 text-white text-center py-3 px-6 rounded-lg font-medium mt-4"
+            >
+              Get Started
+            </a>
+          </nav>
+        </div>
+      )}
+    </header>
   );
 }

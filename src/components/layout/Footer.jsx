@@ -6,14 +6,22 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+export const footerLinks = [
+  { title: "Home", url: "#" },
+  { title: "About", url: "#about" },
+  { title: "Services", url: "#services" },
+  { title: "Portfolio", url: "#portfolio" },
+  { title: "Pricing", url: "#pricing" },
+  { title: "Blog", url: "#blog" },
+  { title: "FAQ", url: "#faq" },
+  { title: "Contact", url: "#contact" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
-
       <div className="max-w-7xl mx-auto px-6 py-16">
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-
           {/* Company */}
 
           <div>
@@ -22,12 +30,11 @@ export default function Footer() {
             </h2>
 
             <p className="mt-5 text-gray-400 leading-7">
-              We help businesses grow through SEO, Google Ads,
-              Social Media Marketing and Website Development.
+              We help businesses grow through SEO, Google Ads, Social Media
+              Marketing and Website Development.
             </p>
 
             <div className="flex gap-4 mt-8">
-
               {/* <a
                 href="#"
                 className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:scale-110 transition"
@@ -59,55 +66,78 @@ export default function Footer() {
               >
                 <FaWhatsapp />
               </a>
-
             </div>
           </div>
 
           {/* Quick Links */}
 
           <div>
-            <h3 className="text-2xl font-bold mb-5">
-              Quick Links
-            </h3>
+            <h3 className="text-2xl font-bold mb-5">Quick Links</h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li><a href="#home" className="hover:text-white">Home</a></li>
-              <li><a href="#about" className="hover:text-white">About</a></li>
-              <li><a href="#Services" className="hover:text-white">Services</a></li>
-              <li><a href="#portfolio" className="hover:text-white">Portfolio</a></li>
-              <li><a href="#Pricing" className="hover:text-white">Pricing</a></li>
-              <li><a href="#faq" className="hover:text-white">FAQ</a></li>
-              <li><a href="#Blog" className="hover:text-white">Blog</a></li>
-              <li><a href="#contact" className="hover:text-white">Contact</a></li>
+              {footerLinks.map((item) => (
+                <li key={item.title}>
+                  <a href={item.url} className="hover:text-white">
+                    {item.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Services */}
 
           <div>
-            <h3 className="text-2xl font-bold mb-5">
-              Services
-            </h3>
-
+            <h3 className="text-2xl font-bold mb-5">Services</h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li><a href="#Services" className="hover:text-white">SEO</a></li>
-              <li><a href="#Services" className="hover:text-white">Google Ads</a></li>
-              <li><a href="#Services" className="hover:text-white">Social Media</a></li>
-              <li><a href="#Services" className="hover:text-white">Web Development</a></li>
-              <li><a href="#Services" className="hover:text-white">Performance Marketing</a></li>
-              <li><a href="#Services" className="hover:text-white">Email Marketing</a></li>
-              <li><a href="#Services" className="hover:text-white">Content Marketing</a></li>
-              <li><a href="#Services" className="hover:text-white">Branding & Design</a></li>
+              <li>
+                <a href="#Services" className="hover:text-white">
+                  SEO
+                </a>
+              </li>
+              <li>
+                <a href="#Services" className="hover:text-white">
+                  Google Ads
+                </a>
+              </li>
+              <li>
+                <a href="#Services" className="hover:text-white">
+                  Social Media
+                </a>
+              </li>
+              <li>
+                <a href="#Services" className="hover:text-white">
+                  Web Development
+                </a>
+              </li>
+              <li>
+                <a href="#Services" className="hover:text-white">
+                  Performance Marketing
+                </a>
+              </li>
+              <li>
+                <a href="#Services" className="hover:text-white">
+                  Email Marketing
+                </a>
+              </li>
+              <li>
+                <a href="#Services" className="hover:text-white">
+                  Content Marketing
+                </a>
+              </li>
+              <li>
+                <a href="#Services" className="hover:text-white">
+                  Branding & Design
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Contact */}
 
           <div>
-            <h3 className="text-2xl font-bold mb-5">
-              Contact
-            </h3>
+            <h3 className="text-2xl font-bold mb-5">Contact</h3>
 
             <div className="space-y-4 text-gray-400">
               <p>📍 Surat, Gujarat</p>
@@ -115,15 +145,12 @@ export default function Footer() {
               <p>📧 gtmarketing5300@gmail.com</p>
             </div>
           </div>
-
         </div>
-
       </div>
 
       <div className="border-t border-gray-700 py-6 text-center text-gray-400">
         © 2026 Multimedia Marketing. All Rights Reserved.
       </div>
-
     </footer>
   );
 }

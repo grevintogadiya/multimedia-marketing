@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/layout/Navbar";
 import { FaWhatsapp } from "react-icons/fa";
-
 
 const tips = [
   {
@@ -106,7 +105,6 @@ export default function TechnicalSeoTips() {
               Learn practical Technical SEO techniques that help Google crawl,
               index and rank your website.
             </p>
-
           </div>
         </section>
 
@@ -137,59 +135,50 @@ export default function TechnicalSeoTips() {
 
         {/* Table of Contents */}
 
-<section className="py-12">
-  <div className="max-w-5xl mx-auto px-6">
+        <section className="py-12">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              {/* Header */}
 
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              {/* Header */}
 
-      {/* Header */}
+              <div className="bg-blue-600 px-8 py-6 text-center">
+                <h2 className="text-3xl font-bold text-white">
+                  Table of Contents
+                </h2>
 
-    {/* Header */}
+                <div className="w-20 h-1 bg-white mx-auto rounded-full my-4"></div>
 
-        <div className="bg-blue-600 px-8 py-6 text-center">
+                <p className="text-blue-100 max-w-2xl mx-auto">
+                  Explore all the Technical SEO topics covered in this complete
+                  guide. Click on any topic below to jump directly to that
+                  section.
+                </p>
+              </div>
+              {/* Content */}
 
-  <h2 className="text-3xl font-bold text-white">
-     Table of Contents
-  </h2>
+              <div className="p-8">
+                <div className="grid md:grid-cols-2 gap-4">
+                  {tips.map((tip) => (
+                    <a
+                      key={tip.number}
+                      href={`#tip-${tip.number}`}
+                      className="flex items-center gap-4 p-4 rounded-lg border border-gray-200 hover:bg-blue-50 hover:border-blue-500 transition duration-300"
+                    >
+                      <span className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold">
+                        {tip.number}
+                      </span>
 
-  <div className="w-20 h-1 bg-white mx-auto rounded-full my-4"></div>
-
-  <p className="text-blue-100 max-w-2xl mx-auto">
-    Explore all the Technical SEO topics covered in this complete guide.
-    Click on any topic below to jump directly to that section.
-  </p>
-
-        </div>  
-      {/* Content */}
-
-      <div className="p-8">
-
-        <div className="grid md:grid-cols-2 gap-4">
-
-          {tips.map((tip) => (
-            <a
-              key={tip.number}
-              href={`#tip-${tip.number}`}
-              className="flex items-center gap-4 p-4 rounded-lg border border-gray-200 hover:bg-blue-50 hover:border-blue-500 transition duration-300"
-            >
-              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold">
-                {tip.number}
-              </span>
-
-              <span className="font-medium text-gray-800">
-                {tip.title}
-              </span>
-            </a>
-          ))}
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
+                      <span className="font-medium text-gray-800">
+                        {tip.title}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* <section className="pb-16">
           <div className="max-w-5xl mx-auto px-6">
             <div className="bg-white rounded-xl shadow-lg p-8">
@@ -252,15 +241,15 @@ export default function TechnicalSeoTips() {
 
             <p className="text-xl text-blue-100 mb-8">
               Our team helps businesses improve website performance, fix
-              technical issues, and achieve higher Google rankings with
-              proven SEO strategies.
+              technical issues, and achieve higher Google rankings with proven
+              SEO strategies.
             </p>
 
-                    <a
+            <a
               href="https://wa.me/919016441913"
-      target="_blank"
-      rel="noopener noreferrer"
-              className="bg-white text-blue-700 px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold hover:bg-gray-100 duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 duration-300"
             >
               💬 Chat on WhatsApp
             </a>
@@ -268,90 +257,83 @@ export default function TechnicalSeoTips() {
         </section>
         {/* Related Blogs */}
 
-<section className="max-w-5xl mx-auto px-4 sm:px-6 mt-20 mb-20">
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 mt-20 mb-20">
+          <div className="border-t pt-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
+              Related Blogs
+            </h2>
 
-  <div className="border-t pt-12">
+            <p className="text-gray-600 text-center mb-10">
+              Continue learning with our latest Digital Marketing articles.
+            </p>
 
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
-      Related Blogs
-    </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Digital Marketing Guide */}
 
-    <p className="text-gray-600 text-center mb-10">
-      Continue learning with our latest Digital Marketing articles.
-    </p>
+              <Link
+                to="/blog/digital-marketing-guide-2026"
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+                  alt="Digital Marketing Guide"
+                  className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
+                />
 
-    <div className="grid md:grid-cols-2 gap-8">
+                <div className="p-6">
+                  <span className="text-sm text-blue-600 font-semibold">
+                    Digital Marketing
+                  </span>
 
-      {/* Digital Marketing Guide */}
+                  <h3 className="text-2xl font-bold mt-2 group-hover:text-blue-600 transition">
+                    Digital Marketing Guide 2026
+                  </h3>
 
-      <Link
-        to="/blog/digital-marketing-guide-2026"
-        className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
-          alt="Digital Marketing Guide"
-          className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
-        />
+                  <p className="text-gray-600 mt-4">
+                    Learn Digital Marketing, Social Media, AI Marketing, Meta
+                    Ads, Email Marketing and Website Strategy.
+                  </p>
 
-        <div className="p-6">
-          <span className="text-sm text-blue-600 font-semibold">
-            Digital Marketing
-          </span>
+                  <span className="inline-block mt-6 text-blue-600 font-semibold">
+                    Read More →
+                  </span>
+                </div>
+              </Link>
 
-          <h3 className="text-2xl font-bold mt-2 group-hover:text-blue-600 transition">
-            Digital Marketing Guide 2026
-          </h3>
+              {/* Google Ads */}
 
-          <p className="text-gray-600 mt-4">
-            Learn Digital Marketing, Social Media, AI Marketing,
-            Meta Ads, Email Marketing and Website Strategy.
-          </p>
+              <Link
+                to="/blog/google-ads-vs-facebook-ads"
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=800"
+                  alt="Google Ads vs Facebook Ads"
+                  className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
+                />
 
-          <span className="inline-block mt-6 text-blue-600 font-semibold">
-            Read More →
-          </span>
-        </div>
-      </Link>
+                <div className="p-6">
+                  <span className="text-sm text-blue-600 font-semibold">
+                    Google Ads
+                  </span>
 
+                  <h3 className="text-2xl font-bold mt-2 group-hover:text-blue-600 transition">
+                    Google Ads vs Facebook Ads
+                  </h3>
 
-      {/* Google Ads */}
+                  <p className="text-gray-600 mt-4">
+                    Discover which advertising platform delivers better results
+                    for your business.
+                  </p>
 
-      <Link
-        to="/blog/google-ads-vs-facebook-ads"
-        className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=800"
-          alt="Google Ads vs Facebook Ads"
-          className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
-        />
-
-        <div className="p-6">
-          <span className="text-sm text-blue-600 font-semibold">
-            Google Ads
-          </span>
-
-          <h3 className="text-2xl font-bold mt-2 group-hover:text-blue-600 transition">
-            Google Ads vs Facebook Ads
-          </h3>
-
-          <p className="text-gray-600 mt-4">
-            Discover which advertising platform delivers
-            better results for your business.
-          </p>
-
-          <span className="inline-block mt-6 text-blue-600 font-semibold">
-            Read More →
-          </span>
-        </div>
-      </Link>
-
-    </div>
-
-  </div>
-
-</section>
+                  <span className="inline-block mt-6 text-blue-600 font-semibold">
+                    Read More →
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

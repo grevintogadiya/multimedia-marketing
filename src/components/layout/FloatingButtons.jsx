@@ -1,19 +1,11 @@
 import { useState } from "react";
-import {
-  FaWhatsapp,
-  FaArrowUp,
-  FaComments,
-  FaTimes,
-} from "react-icons/fa";
+import { FaWhatsapp, FaArrowUp, FaComments, FaTimes } from "react-icons/fa";
 
 export default function FloatingAction() {
-
   const [open, setOpen] = useState(false);
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-
-
       {/* Menu Options */}
 
       <div
@@ -27,12 +19,9 @@ export default function FloatingAction() {
           }
         `}
       >
-
-
         {/* WhatsApp Button */}
 
         <div className="relative group">
-
           <span
             className="
               absolute right-16 top-1/2 -translate-y-1/2
@@ -45,7 +34,6 @@ export default function FloatingAction() {
           >
             Chat on WhatsApp
           </span>
-
 
           <a
             href="https://wa.me/919016441913"
@@ -64,19 +52,13 @@ export default function FloatingAction() {
               transition-all duration-300
             "
           >
-
             <FaWhatsapp />
-
           </a>
-
         </div>
-
-
 
         {/* Back To Top Button */}
 
         <div className="relative group">
-
           <span
             className="
               absolute right-16 top-1/2 -translate-y-1/2
@@ -90,19 +72,15 @@ export default function FloatingAction() {
             Back To Top
           </span>
 
-
           <button
             onClick={() => {
-
               window.scrollTo({
                 top: 0,
                 behavior: "smooth",
               });
 
               setOpen(false);
-
             }}
-
             className="
               w-14 h-14
               bg-gradient-to-r from-blue-600 to-indigo-700
@@ -115,26 +93,15 @@ export default function FloatingAction() {
               transition-all duration-300
             "
           >
-
             <FaArrowUp />
-
           </button>
-
-
         </div>
-
-
       </div>
-
-
-
 
       {/* Main Floating Button */}
 
       <button
-
         onClick={() => setOpen(!open)}
-
         className="
           w-16 h-16
           rounded-full
@@ -147,14 +114,9 @@ export default function FloatingAction() {
           hover:rotate-12
           transition-all duration-300
         "
-
       >
-
         {open ? <FaTimes /> : <FaComments />}
-
       </button>
-
-
     </div>
   );
 }
