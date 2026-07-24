@@ -7,7 +7,6 @@ import {
   FaSmile,
 } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
-import Button from "../common/Button";
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -56,7 +55,17 @@ export default function Hero() {
 
             {/* Buttons */}
             <div className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-              <Button>Get Started</Button>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  goToContact();
+                }}
+                className="group inline-flex items-center w-full sm:w-auto justify-center gap-3 rounded-xl bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-500/30"
+              >
+                Get Started
+                <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
               <a
                 href="https://www.youtube.com/@YOUR_CHANNEL_NAME"
                 target="_blank"
