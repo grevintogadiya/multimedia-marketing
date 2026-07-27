@@ -53,7 +53,7 @@ export default function Testimonials() {
       id="testimonials"
       className="bg-gradient-to-b from-blue-50 via-white to-blue-50 pt-20 pb-10"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="  px-6">
         <SectionHeader
           badge="Testimonials"
           title="What Our Clients Say"
