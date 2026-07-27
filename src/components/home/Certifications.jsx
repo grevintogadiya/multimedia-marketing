@@ -24,7 +24,11 @@ const academies = [
       "SEO certification from Semrush Academy covering On-Page SEO and AI Search optimization.",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9QmsZWV3mVm3XQcdBkh8alVU77hG8Bvu-oih3BWA0ag&s=10",
 
-    certificates: ["SEO certificate.jpg", "one page SEO certificate.jpg"],
+    certificates: [
+      "SEO certificate.jpg",
+      "one page SEO certificate.jpg",
+      "Technical certificate.jpg",
+    ],
   },
 ];
 
