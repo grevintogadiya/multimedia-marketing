@@ -1,23 +1,17 @@
 @import "tailwindcss";
 
-/* Global Fix */
-html,
-body,
-#root {
-  width: 100%;
-  overflow-x: hidden;
+html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
@@ -25,23 +19,21 @@ img {
   max-width: 100%;
   display: block;
 }
-
-/* Hide Scrollbar */
+/* global css */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
-/* Swiper */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 .swiper {
-  width: 100%;
-  overflow: hidden;
+  overflow: visible !important;
   padding-top: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 10px !important;
 }
 
 .swiper-wrapper {

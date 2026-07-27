@@ -60,9 +60,8 @@ export default function Testimonials() {
           description="Trusted by businesses across different industries."
         />
 
-        <div className="relative overflow-hidden">
+        <div className="relative">
           <Swiper
-            className="relative overflow-hidden"
             modules={[Autoplay, Pagination]}
             loop={true}
             speed={800}
