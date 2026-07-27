@@ -116,7 +116,7 @@ export default function Hero() {
               <img
                 src="/images/hero.webp"
                 srcSet="
-            /images/hero-768.webp 768w,
+            /images/hero.webp 768w,
             /images/hero.webp 1200w
           "
                 sizes="(max-width:768px) 100vw, 50vw"
