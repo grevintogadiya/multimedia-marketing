@@ -70,7 +70,8 @@ export default function Hero() {
                 href="https://www.youtube.com/@YOUR_CHANNEL_NAME"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center w-full sm:w-auto justify-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-800 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:text-blue-600 hover:shadow-lg"
+                onClick={(e) => e.stopPropagation()}
+                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto rounded-xl border border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-800 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:text-blue-600 hover:shadow-lg"
               >
                 <FaPlay className="text-sm transition-transform duration-300 group-hover:scale-110" />
                 Watch Demo
