@@ -7,48 +7,43 @@ const projects = [
     category: "Website Development",
     description:
       "Designed and developed a modern e-commerce website with responsive layouts, secure payment integration, and an optimized shopping experience to boost online sales and customer satisfaction.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+    image: "/images/portfolio/E-Commerce.webp",
   },
+
   {
     title: "Google Ads Campaign",
     category: "Performance Marketing",
     description:
       "Executed high-performing Google Ads campaigns focused on lead generation, improved click-through rates, and maximizing return on advertising investment.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+    image: "/images/portfolio/Google Ads Campaign.webp",
   },
   {
     title: "Social Media Branding",
     category: "Social Media Marketing",
     description:
       "Created engaging social media strategies with eye-catching creatives, content planning, and audience engagement techniques to strengthen brand awareness.",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=80",
+    image: "/images/portfolio/Social Media Branding.webp",
   },
   {
     title: "SEO Optimization",
     category: "Search Engine Optimization",
     description:
       "Implemented comprehensive SEO strategies including technical SEO, keyword research, on-page optimization, and content improvements to achieve higher search rankings.",
-    image:
-      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&auto=format&fit=crop&q=80",
+    image: "/images/portfolio/SEO Optimization.webp",
   },
   {
     title: "Business Branding",
     category: "Brand Identity",
     description:
       "Developed complete branding solutions including logo design, color palettes, typography, and marketing assets to create a strong and memorable business identity.",
-    image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop&q=80",
+    image: "/images/portfolio/Business Branding.webp",
   },
   {
     title: "Marketing Dashboard",
     category: "Analytics & Reporting",
     description:
       "Designed an interactive dashboard that provides real-time campaign analytics, conversion tracking, and performance insights for smarter business decisions.",
-    image:
-      "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&auto=format&fit=crop&q=80",
+    image: "/images/portfolio/Marketing Dashboard.webp",
   },
 ];
 
