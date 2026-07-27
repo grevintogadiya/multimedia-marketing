@@ -17,26 +17,28 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* LEFT IMAGE */}
-          <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto">
-            <img
-              src="/images/about.jpg"
-              alt="Digital Marketing Team"
-              className="
-      w-full
-      h-[280px]
-      sm:h-[360px]
-      md:h-[420px]
-      lg:h-[500px]
-      xl:h-[560px]
-      object-cover
-      rounded-3xl
-      shadow-2xl
-      transition-all
-      duration-500
-      hover:scale-[1.02]
-    "
-            />
-          </div>
+          <img
+            src="/images/about.jpg"
+            alt="Multimedia Marketing team providing SEO, website development, Google Ads and digital marketing services"
+            width={800}
+            height={560}
+            loading="lazy"
+            decoding="async"
+            className="
+                w-full
+                h-[280px]
+                sm:h-[360px]
+                md:h-[420px]
+                lg:h-[500px]
+                xl:h-[560px]
+                object-cover
+                rounded-3xl
+                shadow-2xl
+                transition-all
+                duration-500
+                hover:scale-[1.02]
+              "
+          />
 
           {/* RIGHT CONTENT */}
           <div className="text-left">

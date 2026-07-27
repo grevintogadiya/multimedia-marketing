@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import Navbar from "../components/layout/Navbar";
 import { FaWhatsapp } from "react-icons/fa";
-
+import { Helmet } from "react-helmet-async";
 const tips = [
   {
     number: "1",
@@ -80,6 +80,92 @@ export default function TechnicalSeoTips() {
   return (
     <>
       <Navbar />
+      <Helmet>
+        <title>
+          10 Technical SEO Tips to Improve Website Rankings | Multimedia
+          Marketing
+        </title>
+
+        <meta
+          name="description"
+          content="Learn 10 proven technical SEO tips to improve website speed, Core Web Vitals, indexing, crawlability and Google rankings."
+        />
+
+        <meta
+          name="keywords"
+          content="Technical SEO, SEO Tips, Website Speed, Core Web Vitals, Google Ranking, Technical SEO Guide"
+        />
+
+        <link
+          rel="canonical"
+          href="https://multimedia-marketing.vercel.app/blog/seo-tips"
+        />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content="10 Technical SEO Tips to Improve Website Rankings"
+        />
+        <meta
+          property="og:description"
+          content="Learn 10 practical Technical SEO tips that help Google crawl, index and rank your website."
+        />
+        <meta
+          property="og:url"
+          content="https://multimedia-marketing.vercel.app/blog/seo-tips"
+        />
+
+        <meta
+          property="og:image"
+          content="https://multimedia-marketing.vercel.app/og-image.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="10 Technical SEO Tips to Improve Website Rankings"
+        />
+        <meta
+          name="twitter:description"
+          content="Learn practical Technical SEO techniques to improve Google rankings."
+        />
+        <meta
+          name="twitter:image"
+          content="https://multimedia-marketing.vercel.app/og-image.png"
+        />
+
+        {/* Article Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "10 Technical SEO Tips to Improve Website Rankings",
+            description:
+              "Learn practical Technical SEO techniques that help Google crawl, index and rank your website.",
+            image: "https://multimedia-marketing.vercel.app/og-image.png",
+            author: {
+              "@type": "Organization",
+              name: "Multimedia Marketing",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Multimedia Marketing",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://multimedia-marketing.vercel.app/logo.png",
+              },
+            },
+            datePublished: "2026-07-20",
+            dateModified: "2026-07-20",
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://multimedia-marketing.vercel.app/blog/seo-tips",
+            },
+          })}
+        </script>
+      </Helmet>
       <div className="bg-gray-100 min-h-screen">
         {/* Hero */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-700 to-indigo-700 text-white py-24">

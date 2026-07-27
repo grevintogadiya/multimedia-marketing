@@ -1,35 +1,54 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import SectionHeader from "../common/SectionHeader";
+
 const projects = [
   {
     title: "E-Commerce Website",
     category: "Website Development",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+    description:
+      "Designed and developed a modern e-commerce website with responsive layouts, secure payment integration, and an optimized shopping experience to boost online sales and customer satisfaction.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
   },
   {
     title: "Google Ads Campaign",
     category: "Performance Marketing",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+    description:
+      "Executed high-performing Google Ads campaigns focused on lead generation, improved click-through rates, and maximizing return on advertising investment.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
   },
   {
     title: "Social Media Branding",
-    category: "Social Media",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800",
+    category: "Social Media Marketing",
+    description:
+      "Created engaging social media strategies with eye-catching creatives, content planning, and audience engagement techniques to strengthen brand awareness.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=80",
   },
   {
     title: "SEO Optimization",
-    category: "SEO",
-    image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800",
+    category: "Search Engine Optimization",
+    description:
+      "Implemented comprehensive SEO strategies including technical SEO, keyword research, on-page optimization, and content improvements to achieve higher search rankings.",
+    image:
+      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&auto=format&fit=crop&q=80",
   },
   {
     title: "Business Branding",
     category: "Brand Identity",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800",
+    description:
+      "Developed complete branding solutions including logo design, color palettes, typography, and marketing assets to create a strong and memorable business identity.",
+    image:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop&q=80",
   },
   {
     title: "Marketing Dashboard",
-    category: "Analytics",
-    image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800",
+    category: "Analytics & Reporting",
+    description:
+      "Designed an interactive dashboard that provides real-time campaign analytics, conversion tracking, and performance insights for smarter business decisions.",
+    image:
+      "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&auto=format&fit=crop&q=80",
   },
 ];
 
@@ -37,47 +56,60 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className=" bg-gradient-to-r from-slate-50 via-white to-blue-50 pt-24 pb-8 bg-white"
+      className="bg-gradient-to-r from-slate-50 via-white to-blue-50 py-24"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           badge="Portfolio"
           title="Our Recent Projects"
-          description="Explore some of our successful digital marketing and web development projects."
+          description="Explore our portfolio of innovative websites, successful digital marketing campaigns, SEO strategies, branding solutions, and performance-driven projects that have helped businesses build a stronger online presence."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <div
+            <article
               key={index}
-              className="group rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+              className="flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
+              {/* Image */}
               <div className="overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
-                  className="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
+                  alt={`${project.title} - ${project.category} Project by Multimedia Marketing`}
+                  loading="lazy"
+                  decoding="async"
+                  width={800}
+                  height={600}
+                  className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
 
-              <div className="p-6">
-                <p className="text-blue-600 font-semibold">
+              {/* Content */}
+              <div className="flex flex-1 flex-col p-6">
+                <span className="text-sm font-semibold uppercase tracking-wide text-blue-600">
                   {project.category}
+                </span>
+
+                <h3 className="mt-2 text-2xl font-bold text-gray-900">
+                  {project.title}
+                </h3>
+
+                <p className="mt-3 flex-1 text-sm leading-7 text-gray-600">
+                  {project.description}
                 </p>
 
-                <h3 className="text-2xl font-bold mt-2">{project.title}</h3>
-
-                <a
-                  href="https://your-project-link.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-700 transition"
-                >
-                  View Project
-                  <FaExternalLinkAlt className="text-sm" />
-                </a>
+                <div className="pt-6 pb-2">
+                  <button
+                    type="button"
+                    disabled
+                    className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-500 cursor-not-allowed"
+                  >
+                    Coming Soon
+                    <FaExternalLinkAlt className="text-xs" />
+                  </button>
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

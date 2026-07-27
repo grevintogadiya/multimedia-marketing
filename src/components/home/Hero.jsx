@@ -116,11 +116,11 @@ export default function Hero() {
               <img
                 src="/images/hero.webp"
                 srcSet="
-        /images/hero-768.webp 768w,
-        /images/hero.webp 1200w
-      "
+            /images/hero-768.webp 768w,
+            /images/hero.webp 1200w
+          "
                 sizes="(max-width:768px) 100vw, 50vw"
-                alt="Digital Marketing Agency"
+                alt="Multimedia Marketing Digital Marketing Agency"
                 width={768}
                 height={512}
                 loading="eager"

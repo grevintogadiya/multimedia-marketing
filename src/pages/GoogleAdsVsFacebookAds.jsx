@@ -13,12 +13,81 @@ import {
   FaImage,
   FaUsers,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 export const GoogleAdsVsFacebookAds = () => {
   return (
     <>
       <Navbar />
+      <Helmet>
+        <title>
+          Google Ads vs Facebook Ads: Which is Better for Your Business? |
+          Multimedia Marketing
+        </title>
 
+        <meta
+          name="description"
+          content="Compare Google Ads and Facebook Ads to find the best advertising platform for your business. Learn the pros, cons, and key differences."
+        />
+
+        <link
+          rel="canonical"
+          href="https://multimedia-marketing.vercel.app/blog/google-ads-vs-facebook-ads"
+        />
+
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content="Google Ads vs Facebook Ads: Which is Better?"
+        />
+
+        <meta
+          property="og:description"
+          content="Compare Google Ads and Facebook Ads to choose the right platform for your business."
+        />
+
+        <meta
+          property="og:url"
+          content="https://multimedia-marketing.vercel.app/blog/google-ads-vs-facebook-ads"
+        />
+
+        <meta
+          property="og:image"
+          content="https://multimedia-marketing.vercel.app/og-image.png"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Google Ads vs Facebook Ads: Which is Better?",
+            description:
+              "Compare Google Ads and Facebook Ads for better business growth.",
+            image: "https://multimedia-marketing.vercel.app/og-image.png",
+            author: {
+              "@type": "Organization",
+              name: "Multimedia Marketing",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Multimedia Marketing",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://multimedia-marketing.vercel.app/logo.png",
+              },
+            },
+            datePublished: "2026-07-20",
+            dateModified: "2026-07-20",
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id":
+                "https://multimedia-marketing.vercel.app/blog/google-ads-vs-facebook-ads",
+            },
+          })}
+        </script>
+      </Helmet>
       <div className="bg-gray-100 min-h-screen">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-700 to-indigo-700 text-white py-24">

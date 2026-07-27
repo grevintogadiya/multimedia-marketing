@@ -7,13 +7,81 @@ import {
   FaWhatsapp,
   FaArrowLeft,
 } from "react-icons/fa";
-
+import { Helmet } from "react-helmet-async";
 import Navbar from "../components/layout/Navbar";
 
 export default function DigitalMarketingGuide() {
   return (
     <>
       <Navbar />
+      <Helmet>
+        <title>
+          Complete Digital Marketing Guide 2026 | Multimedia Marketing
+        </title>
+
+        <meta
+          name="description"
+          content="Complete Digital Marketing Guide covering SEO, Google Ads, Social Media Marketing, AI Marketing, Email Marketing and Website Strategy."
+        />
+
+        <link
+          rel="canonical"
+          href="https://multimedia-marketing.vercel.app/blog/digital-marketing-guide-2026"
+        />
+
+        <meta property="og:type" content="article" />
+
+        <meta
+          property="og:title"
+          content="Complete Digital Marketing Guide 2026"
+        />
+
+        <meta
+          property="og:description"
+          content="Learn SEO, Google Ads, Social Media Marketing, AI Marketing and Website Strategy."
+        />
+
+        <meta
+          property="og:url"
+          content="https://multimedia-marketing.vercel.app/blog/digital-marketing-guide-2026"
+        />
+
+        <meta
+          property="og:image"
+          content="https://multimedia-marketing.vercel.app/og-image.png"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Complete Digital Marketing Guide 2026",
+            description:
+              "Complete Digital Marketing Guide for SEO, Social Media, Google Ads, AI Marketing and Website Growth.",
+            image: "https://multimedia-marketing.vercel.app/og-image.png",
+            author: {
+              "@type": "Organization",
+              name: "Multimedia Marketing",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Multimedia Marketing",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://multimedia-marketing.vercel.app/logo.png",
+              },
+            },
+            datePublished: "2026-07-20",
+            dateModified: "2026-07-20",
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id":
+                "https://multimedia-marketing.vercel.app/blog/digital-marketing-guide-2026",
+            },
+          })}
+        </script>
+      </Helmet>
       <div className="bg-gray-50 min-h-screen overflow-x-hidden">
         {/* Hero Section */}
         <section className="relative h-[320px] sm:h-[400px] md:h-[500px]">

@@ -6,19 +6,19 @@ const blogs = [
   {
     title: "10 SEO Tips to Rank Higher on Google",
     date: "July 2026",
-    image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800",
+    image: "/images/blog/blog-seo.webp",
     slug: "seo-tips",
   },
   {
     title: "Google Ads vs Facebook Ads: Which is Better?",
     date: "July 2026",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+    image: "/images/blog/blog-google-ads.webp",
     slug: "google-ads-vs-facebook-ads",
   },
   {
     title: "Digital Marketing Guide: Strategies for Success",
     date: "July 2026",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800",
+    image: "/images/blog/blog-digital-marketing.webp",
     slug: "digital-marketing-guide-2026",
   },
 ];
@@ -47,7 +47,11 @@ export default function Blog() {
             >
               <img
                 src={blog.image}
-                alt={blog.title}
+                alt={`${blog.title} | Digital Marketing Blog by Multimedia Marketing`}
+                loading="lazy"
+                decoding="async"
+                width={800}
+                height={500}
                 className="w-full h-64 object-cover hover:scale-105 transition duration-500"
               />
 
