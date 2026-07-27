@@ -67,11 +67,10 @@ export default function Hero() {
                 <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
-                href="https://www.youtube.com/@YOUR_CHANNEL_NAME"
+                href="https://www.youtube.com" // તમારો YouTube Link મૂકો
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto rounded-xl border border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-800 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:text-blue-600 hover:shadow-lg"
+                className="relative z-[999] pointer-events-auto group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-800 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:text-blue-600 hover:shadow-xl active:scale-95"
               >
                 <FaPlay className="text-sm transition-transform duration-300 group-hover:scale-110" />
                 Watch Demo
