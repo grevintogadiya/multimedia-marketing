@@ -11,10 +11,10 @@ const academies = [
     logo: "https://1000logos.net/wp-content/uploads/2022/12/HubSpot-Logo.png",
 
     certificates: [
-      "contant marketing certificate.png",
-      "email marketing certificate.png",
-      "inbound certficate.png",
-      "soical media certificate.png",
+      "images/certificates/contant marketing certificate.png",
+      "images/certificates/email marketing certificate.png",
+      "images/certificates/inbound certficate.png",
+      "images/certificates/soical media certificate.png",
     ],
   },
 
@@ -25,9 +25,11 @@ const academies = [
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9QmsZWV3mVm3XQcdBkh8alVU77hG8Bvu-oih3BWA0ag&s=10",
 
     certificates: [
-      "SEO certificate.jpg",
-      "one page SEO certificate.jpg",
-      "Technical certificate.jpg",
+      "images/certificates/SEO certificate.jpg",
+      "images/certificates/one page SEO certificate.jpg",
+      "images/certificates/Technical certificate.jpg",
+      "images/certificates/off page SEO certificate.jpg",
+      "images/certificates/Local SEO certificate.jpg",
     ],
   },
 ];
