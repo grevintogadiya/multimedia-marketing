@@ -526,7 +526,7 @@ export const GoogleAdsVsFacebookAds = () => {
             </p>
 
             <a
-              href="https://wa.me/919016441913"
+              href="https://wa.me/919016441914?text=Hello%20Multimedia%20Marketing,%20I%20need%20Digital%20Marketing%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-blue-700 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition"

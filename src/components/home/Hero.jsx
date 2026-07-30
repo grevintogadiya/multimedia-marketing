@@ -70,7 +70,7 @@ export default function Hero() {
                 href="https://www.youtube.com" // તમારો YouTube Link મૂકો
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative z-[999] pointer-events-auto group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-800 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:text-blue-600 hover:shadow-xl active:scale-95"
+                className="relative pointer-events-auto group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-800 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:text-blue-600 hover:shadow-xl active:scale-95"
               >
                 <FaPlay className="text-sm transition-transform duration-300 group-hover:scale-110" />
                 Watch Demo

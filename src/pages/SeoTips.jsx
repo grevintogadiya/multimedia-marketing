@@ -332,7 +332,7 @@ export default function TechnicalSeoTips() {
             </p>
 
             <a
-              href="https://wa.me/919016441913"
+              href="https://wa.me/919016441914?text=Hello%20Multimedia%20Marketing,%20I%20need%20Digital%20Marketing%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 duration-300"

@@ -59,7 +59,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://wa.me/919016441913"
+                href="https://wa.me/919016441913?text=Hello%20Multimedia%20Marketing,%20I%20need%20Digital%20Marketing%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center hover:scale-110 transition"

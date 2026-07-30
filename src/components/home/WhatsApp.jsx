@@ -10,7 +10,7 @@ export default function WhatsApp() {
       <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-40"></span>
 
       <a
-        href="https://wa.me/919016441913"
+        href="https://wa.me/919016441914?text=Hello%20Multimedia%20Marketing,%20I%20need%20Digital%20Marketing%20services."
         target="_blank"
         rel="noopener noreferrer"
         className="relative block"
