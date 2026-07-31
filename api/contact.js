@@ -3,9 +3,11 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method Not Allowed" });
   }
 
-  const { name, email, phone, service, message } = req.body;
-
   try {
+    const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+
+    const { name, email, phone, service, message } = body;
+
     const response = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
       headers: {
@@ -20,6 +22,7 @@ export default async function handler(req, res) {
           SERVICE: service,
           MESSAGE: message,
         },
+        listIds: [3],
         updateEnabled: true,
       }),
     });
@@ -32,9 +35,11 @@ export default async function handler(req, res) {
 
     return res.status(200).json({
       success: true,
-      message: "Contact added to Brevo successfully",
+      message: "Contact added successfully",
     });
   } catch (error) {
+    console.error(error);
+
     return res.status(500).json({
       success: false,
       message: error.message,

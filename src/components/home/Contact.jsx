@@ -26,7 +26,7 @@ export default function Contact() {
     };
 
     try {
-      // EmailJS
+      // 1. Send email using EmailJS
       await emailjs.sendForm(
         "service_acwo52a",
         "template_s48atib",
@@ -34,8 +34,8 @@ export default function Contact() {
         "4XyOmN3RGXZ8nwl8j",
       );
 
-      // Brevo
-      await fetch("/api/contact", {
+      // 2. Save contact to Brevo
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,12 +43,18 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Failed to save contact to Brevo");
+      }
+
       alert("Message Sent Successfully!");
 
       form.current.reset();
     } catch (error) {
-      console.error(error);
-      alert("Something went wrong!");
+      console.error("Error:", error);
+      alert(error.message || "Something went wrong!");
     }
   };
 
