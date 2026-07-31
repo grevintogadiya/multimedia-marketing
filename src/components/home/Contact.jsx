@@ -12,24 +12,44 @@ import SectionHeader from "../common/SectionHeader";
 export default function Contact() {
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
+    const formData = new FormData(form.current);
+
+    const data = {
+      name: formData.get("user_name"),
+      email: formData.get("user_email"),
+      phone: formData.get("user_phone"),
+      service: formData.get("service"),
+      message: formData.get("message"),
+    };
+
+    try {
+      // EmailJS
+      await emailjs.sendForm(
         "service_acwo52a",
         "template_s48atib",
         form.current,
         "4XyOmN3RGXZ8nwl8j",
-      )
-      .then(() => {
-        alert("Message Sent Successfully!");
-        form.current.reset();
-      })
-      .catch((error) => {
-        console.log("EmailJS Error:", error);
-        alert(error.text || error.message);
+      );
+
+      // Brevo
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
+
+      alert("Message Sent Successfully!");
+
+      form.current.reset();
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong!");
+    }
   };
 
   return (
