@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone } = req.body;
+    const { name, email, phone, service, message } = req.body;
 
     const response = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
@@ -28,6 +28,7 @@ export default async function handler(req, res) {
         updateEnabled: true,
       }),
     });
+
     const text = await response.text();
 
     console.log("========== BREVO ==========");
