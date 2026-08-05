@@ -4,9 +4,12 @@ export default function Loader() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("Loader Mounted");
+
     const timer = setTimeout(() => {
+      console.log("Loader Hidden");
       setLoading(false);
-    }, 1000);
+    }, 5000); // 5 seconds માટે test
 
     return () => clearTimeout(timer);
   }, []);
