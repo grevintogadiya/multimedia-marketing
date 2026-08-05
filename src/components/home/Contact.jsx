@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {
   FaPhoneAlt,
@@ -11,6 +11,7 @@ import SectionHeader from "../common/SectionHeader";
 
 export default function Contact() {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -26,6 +27,8 @@ export default function Contact() {
     };
 
     try {
+      setLoading(true);
+
       // Send Email Notification
       await emailjs.sendForm(
         "service_acwo52a",
@@ -68,6 +71,9 @@ export default function Contact() {
     } catch (error) {
       console.error(error);
       alert(error.message || "Something went wrong!");
+    } finally {
+      // Loading state always stops
+      setLoading(false);
     }
   };
 
@@ -258,18 +264,46 @@ export default function Contact() {
               ></textarea>
 
               {/* Submit Button */}
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  form.current.requestSubmit();
-                }}
-                className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              <button
+                type="submit"
+                disabled={loading}
+                className={`flex w-full items-center justify-center gap-3 rounded-xl py-3 sm:py-4 text-base sm:text-lg font-semibold text-white shadow-lg transition-all duration-300 ${
+                  loading
+                    ? "cursor-not-allowed bg-gray-400"
+                    : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:-translate-y-1 hover:shadow-2xl"
+                }`}
               >
-                <FaPaperPlane />
-                Send Message
-              </a>
-
+                {loading ? (
+                  <>
+                    <svg
+                      className="h-5 w-5 animate-spin"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                      />
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <FaPaperPlane />
+                    Send Message
+                  </>
+                )}
+              </button>
               <p className="text-center text-sm text-gray-500">
                 🔒 Your information is secure and will never be shared with
                 third parties.
