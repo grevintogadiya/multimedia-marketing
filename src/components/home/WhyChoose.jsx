@@ -36,7 +36,7 @@ export default function WhyChoose() {
           description="We combine creativity, technology, and data-driven strategies to help your business grow faster."
         />
         {/* Features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           {feature.map((service) => (
             <ServiceCard
               key={service.title}
