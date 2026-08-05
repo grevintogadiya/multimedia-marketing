@@ -1,44 +1,52 @@
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method Not Allowed" });
+    return res.status(405).json({
+      success: false,
+      message: "Method Not Allowed",
+    });
   }
 
   try {
-    const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-
-    const { name, email, phone, service, message } = body;
+    const { name, email, phone } = req.body;
 
     const response = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
         "api-key": process.env.BREVO_API_KEY,
       },
       body: JSON.stringify({
-        email,
+        email: email,
         attributes: {
           FIRSTNAME: name,
           SMS: phone,
-          SERVICE: service,
-          MESSAGE: message,
         },
         listIds: [3],
         updateEnabled: true,
       }),
     });
 
-    const data = await response.json();
+    const text = await response.text();
+
+    console.log("========== BREVO ==========");
+    console.log("Status:", response.status);
+    console.log("Response:", text);
+    console.log("===========================");
 
     if (!response.ok) {
-      return res.status(response.status).json(data);
+      return res.status(response.status).json({
+        success: false,
+        message: text || "Brevo API Error",
+      });
     }
 
     return res.status(200).json({
       success: true,
-      message: "Contact added successfully",
+      message: "Contact added successfully to Brevo.",
     });
   } catch (error) {
-    console.error(error);
+    console.error("API Error:", error);
 
     return res.status(500).json({
       success: false,

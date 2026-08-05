@@ -43,7 +43,10 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
+      const text = await response.text();
+
+      console.log("Brevo Status:", response.status);
+      console.log("Brevo Response:", text);
 
       if (!response.ok) {
         throw new Error(result.message || "Failed to save contact to Brevo");
