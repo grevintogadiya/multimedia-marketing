@@ -9,7 +9,7 @@ export default function Loader() {
     const timer = setTimeout(() => {
       console.log("Loader Hidden");
       setLoading(false);
-    }, 5000); // 5 seconds માટે test
+    }, 1000); // 1 second માટે test
 
     return () => clearTimeout(timer);
   }, []);
