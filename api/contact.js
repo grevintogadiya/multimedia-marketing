@@ -17,10 +17,10 @@ export default async function handler(req, res) {
         "api-key": process.env.BREVO_API_KEY,
       },
       body: JSON.stringify({
-        email: email,
+        email,
         attributes: {
           FIRSTNAME: name,
-          SMS: phone,
+          SMS: `+91${phone}`,
         },
         listIds: [3],
         updateEnabled: true,
