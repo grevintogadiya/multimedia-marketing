@@ -20,13 +20,14 @@ export default async function handler(req, res) {
         email,
         attributes: {
           FIRSTNAME: name,
-          SMS: `+91${phone}`,
+          PHONE: phone,
+          SERVICE: service,
+          MESSAGE: message,
         },
         listIds: [3],
         updateEnabled: true,
       }),
     });
-
     const text = await response.text();
 
     console.log("========== BREVO ==========");
