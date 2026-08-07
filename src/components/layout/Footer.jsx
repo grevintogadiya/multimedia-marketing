@@ -52,7 +52,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/grevin-togadiya/"
                 className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:scale-110 transition"
               >
                 <FaLinkedinIn />
