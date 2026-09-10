@@ -11,7 +11,6 @@ export const footerLinks = [
   { title: "About", url: "#about" },
   { title: "Services", url: "#services" },
   { title: "Portfolio", url: "#portfolio" },
-  { title: "Pricing", url: "#pricing" },
   { title: "Blog", url: "#blog" },
   { title: "FAQ", url: "#faq" },
   { title: "Contact", url: "#contact" },
