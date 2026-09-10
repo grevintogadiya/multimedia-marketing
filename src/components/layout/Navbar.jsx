@@ -105,7 +105,7 @@ export default function Navbar() {
               Portfolio
             </a>
 
-            <a
+            {/* <a
               href="#Pricing"
               onClick={(e) => {
                 e.preventDefault();
@@ -114,7 +114,7 @@ export default function Navbar() {
               className="relative cursor-pointer text-[15px] font-medium hover:text-blue-600 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
             >
               Pricing
-            </a>
+            </a> */}
 
             <a
               href="#faq"
@@ -234,7 +234,7 @@ export default function Navbar() {
               Portfolio
             </a>
 
-            <a
+            {/* <a
               href="#pricing"
               onClick={(e) => {
                 e.preventDefault();
@@ -243,7 +243,7 @@ export default function Navbar() {
               className="hover:text-blue-600 transition duration-300"
             >
               Pricing
-            </a>
+            </a> */}
 
             <a
               href="#faq"

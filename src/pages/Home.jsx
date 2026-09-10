@@ -7,7 +7,7 @@ import Certifications from "../components/home/Certifications";
 import Services from "../components/home/Services";
 import WhyChoose from "../components/home/WhyChoose";
 import Portfolio from "../components/home/Portfolio";
-import Pricing from "../components/home/Pricing";
+// import Pricing from "../components/home/Pricing";
 import Testimonials from "../components/home/Testimonials";
 import FAQ from "../components/home/FAQ";
 import CTA from "../components/home/CTA";
@@ -227,7 +227,7 @@ export default function Home() {
       <Services />
       <WhyChoose />
       <Portfolio />
-      <Pricing />
+      {/* <Pricing /> */}
       <Testimonials />
       <FAQ />
       <CTA />
