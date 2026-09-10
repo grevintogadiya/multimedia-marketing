@@ -140,9 +140,23 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-5">Contact</h3>
 
             <div className="space-y-4 text-gray-400">
-              <p>📍 Surat, Gujarat</p>
-              <p>📞 +91 9016441913</p>
-              <p>📧 gtmarketing5300@gmail.com</p>
+              <a
+                href="https://maps.google.com/?q=Surat, Gujarat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                📍 Surat, Gujarat
+              </a>
+              <a href="tel:+919016441913" className="hover:text-white">
+                📞 +91 9016441913
+              </a>
+              <a
+                href="mailto:gtmarketing5300@gmail.com"
+                className="hover:text-white"
+              >
+                📧 gtmarketing5300@gmail.com
+              </a>
             </div>
           </div>
         </div>
